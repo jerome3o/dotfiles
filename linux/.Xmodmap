@@ -1,0 +1,21 @@
+! clear Lock 
+! keycode 66 = ISO_Level3_Shift
+! 
+! keycode 44 = j J Down Down
+
+! remove Caps Lock functionality
+clear lock
+! use Caps Lock to access 3rd and 4th value in keycode definition below
+keycode 66 = Mode_switch
+
+keycode 31 = i      I       Up      Up
+
+keycode 43 = h H BackSpace BackSpace
+keycode 44 = j      J       Home    Home
+keycode 45 = k      K       Down    Down
+keycode 46 = l      L       End     End
+keycode 47 = semicolon colon Delete Delete
+
+
+keycode 58 = m      M       Left    Left
+keycode 59 = comma  less    Right   Right
