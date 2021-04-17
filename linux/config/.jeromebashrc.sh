@@ -207,3 +207,5 @@ function getcommitprefix(){
 		echo ""
 	fi
 }
+
+alias python=python3
