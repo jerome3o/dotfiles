@@ -37,10 +37,10 @@
 keystate_capslock = enable
 #keystate_scrolllock= enable
 
-"~/hotkeys.sh"
+"~/.hotkeys_on.sh"
     Control + F12
 
-"~/off_hotkeys.sh"
+"~/.hotkeys_off.sh"
     Control + F11
 
 

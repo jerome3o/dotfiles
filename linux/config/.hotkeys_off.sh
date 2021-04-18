@@ -1,0 +1,2 @@
+setxkbmap
+killall xcape
