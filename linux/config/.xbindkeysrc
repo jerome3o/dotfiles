@@ -43,7 +43,7 @@ keystate_capslock = enable
 "~/.hotkeys_off.sh"
     Control + F11
 
-"flameshot"
+"flameshot gui"
     Control + F10
 
 
