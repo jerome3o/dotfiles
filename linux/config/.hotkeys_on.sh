@@ -1,2 +1,2 @@
-xkbcomp .xkbmap $DISPLAY
+xkbcomp ~/.xkbmap $DISPLAY
 xcape -e 'Shift_L=parenleft;Shift_R=parenright'
