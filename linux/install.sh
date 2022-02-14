@@ -19,6 +19,9 @@ git config --global user.name "Jerome Swannack"
 # vim
 sudo apt-get install -y vim
 
+# htop
+sudo apt-get install -y htop
+
 # vscode
 sudo snap install --classic code
 
