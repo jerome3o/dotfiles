@@ -11,6 +11,9 @@ sudo apt-get install -y xcape xbindkeys
 # flameshot
 sudo apt-get install -y flameshot
 
+# vlc
+sudo apt-get install -y vlc
+
 # git
 sudo apt-get install -y git
 git config --global user.email "jeromeswannack@gmail.com"
