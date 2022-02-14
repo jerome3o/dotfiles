@@ -43,6 +43,9 @@ keystate_capslock = enable
 "~/.hotkeys_off.sh"
     Control + F11
 
+"flameshot"
+    Control + F10
+
 
 #"xdotool key --delay 200 Up"
 #"xdotool key Up" 
