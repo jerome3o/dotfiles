@@ -22,6 +22,9 @@ sudo apt-get install -y vim
 # htop
 sudo apt-get install -y htop
 
+# venv
+sudo apt install -y python3.8-venv python3-pip
+
 # vscode
 sudo snap install --classic code
 
