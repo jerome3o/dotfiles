@@ -125,7 +125,6 @@ fi
 
 
 alias gs='git status'
-alias hmi='cd ~/Source/FlightOps/RocketLab.ElectronHmi/'
 
 # git log
 function gl(){
