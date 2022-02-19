@@ -210,3 +210,7 @@ function getcommitprefix(){
 }
 
 alias python=python3
+
+function gg() {
+	git grep $1 $(git rev-list --all)
+}

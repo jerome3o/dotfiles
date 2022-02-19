@@ -14,13 +14,14 @@ sudo apt-get install -y flameshot
 # vlc
 sudo apt-get install -y vlc
 
+# vim
+sudo apt-get install -y vim
+
 # git
 sudo apt-get install -y git
 git config --global user.email "jeromeswannack@gmail.com"
 git config --global user.name "Jerome Swannack"
-
-# vim
-sudo apt-get install -y vim
+git config --global core.editor "vim"
 
 # htop
 sudo apt-get install -y htop
