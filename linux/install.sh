@@ -70,3 +70,8 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 sudo add-apt-repository -y ppa:appimagelauncher-team/stable
 sudo apt-get update
 sudo apt-get install -y appimagelauncher
+
+# SSH
+
+sudo apt update
+sudo apt install -y openssh-server
