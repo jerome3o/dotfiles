@@ -75,3 +75,7 @@ sudo apt-get install -y appimagelauncher
 
 sudo apt update
 sudo apt install -y openssh-server
+
+# install portaudio
+# This is for pyaudio and capturing mic data
+sudo apt-get install -y portaudio19-dev
