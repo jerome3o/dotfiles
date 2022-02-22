@@ -79,3 +79,12 @@ sudo apt install -y openssh-server
 # install portaudio
 # This is for pyaudio and capturing mic data
 sudo apt-get install -y portaudio19-dev
+
+# ruby (for jekyll)
+sudo apt-get install ruby-full build-essential zlib1g-dev
+
+# install gems as user - this is exported in `.jeromebashrc.sh`
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
+gem install jekyll bundler
