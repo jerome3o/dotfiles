@@ -88,3 +88,9 @@ export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
 gem install jekyll bundler
+
+# Install go  (based off https://go.dev/doc/install)
+wget https://go.dev/dl/go1.17.7.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go 
+sudo tar -C /usr/local -xzf go1.17.7.linux-amd64.tar.gz
+rm go1.17.7.linux-amd64.tar.gz
