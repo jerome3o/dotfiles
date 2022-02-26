@@ -1,0 +1,14 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "git-commit",
+        "jupyter",
+        "latex",
+        "markdown",
+        "plaintext",
+        "restructuredtext",
+        "text"
+    ],
+    "git.confirmSync": false
+}
