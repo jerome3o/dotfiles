@@ -30,7 +30,15 @@ sudo apt-get install -y htop
 sudo apt install -y python3.8-venv python3-pip
 
 # vscode
+
+vsdir=~/.config/Code/User
+snippetdir="$vsdir/snippets"
+mkdir -p $snippetdir
+find "$(pwd)/vscode/snippets" -type f -name "*.json" -exec ln -s {} $snippetdir \;
+find "$(pwd)/vscode" -maxdepth 1 -name "*.json" -exec ln -s {} $vsdir \;
+
 sudo snap install --classic code
+
 
 # discord
 sudo snap install discord
