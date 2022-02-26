@@ -20,5 +20,12 @@
 			"}",
 		],
 		"description": "Log output to console"
+	},
+	"todo": {
+		"prefix": "todo",
+		"body": [
+			"// TODO(j.swannack): $1"
+		],
+		"description": "Log output to console"
 	}
 }
