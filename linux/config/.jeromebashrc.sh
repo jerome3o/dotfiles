@@ -210,6 +210,7 @@ function getcommitprefix(){
 }
 
 alias python=python3
+alias bs="browser-sync start -s -f . --no-notify --host 0.0.0.0 --port 9000"
 
 function gg() {
 	git grep $1 $(git rev-list --all)

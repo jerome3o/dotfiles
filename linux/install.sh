@@ -90,8 +90,7 @@ sudo apt-get install -y portaudio19-dev
 
 # ruby (for jekyll)
 sudo apt-get install -y ruby-full build-essential zlib1g-dev
-
-# install gems as user - this is exported in `.jeromebashrc.sh`
+kvm-ok exported in `.jeromebashrc.sh`
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 

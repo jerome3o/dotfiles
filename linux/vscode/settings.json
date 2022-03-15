@@ -10,5 +10,7 @@
         "restructuredtext",
         "text"
     ],
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "go.toolsManagement.autoUpdate": true,
+    "terminal.integrated.enableMultiLinePasteWarning": false
 }
