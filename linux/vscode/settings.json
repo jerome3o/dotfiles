@@ -13,5 +13,6 @@
     "git.confirmSync": false,
     "go.toolsManagement.autoUpdate": true,
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "workbench.iconTheme": "material-icon-theme"
 }
