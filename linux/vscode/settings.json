@@ -14,5 +14,6 @@
     "go.toolsManagement.autoUpdate": true,
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "explorer.confirmDelete": false,
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.minimap.enabled": false
 }

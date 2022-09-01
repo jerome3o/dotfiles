@@ -222,3 +222,29 @@ export PATH="$HOME/gems/bin:$PATH"
 
 # Golang
 export PATH=$PATH:/usr/local/go/bin
+
+venv (){
+	d=$(date +"%D %T" | sed 's/[\/: -]/_/g')
+	mkdir ~/tmp/$d
+	pushd ~/tmp/$d > /dev/null
+	python -m venv ./venv
+	mkdir .vscode
+	echo '{
+		"python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
+		"terminal.activateEnvironment": true
+	}' > ./.vscode/settings.json
+	echo '{
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Python: Current File",
+				"type": "python",
+				"request": "launch",
+				"program": "${file}",
+				"console": "integratedTerminal"
+			}
+		]
+	}' > ./.vscode/launch.json
+	code .
+	popd
+}
