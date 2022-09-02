@@ -13,5 +13,13 @@
     "git.confirmSync": false,
     "go.toolsManagement.autoUpdate": true,
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "editor.rulers": [
+    100
+    ],
+    "editor.formatOnSave": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editorAssociations": {
+        "*.wasm": "hexEditor.hexedit"
+    }
 }
