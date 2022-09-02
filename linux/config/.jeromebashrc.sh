@@ -125,6 +125,7 @@ fi
 
 
 alias gs='git status'
+alias hk='~/.hotkeys_on.sh'
 
 # git log
 function gl(){
@@ -210,7 +211,7 @@ function getcommitprefix(){
 }
 
 alias python=python3
-alias bs="browser-sync start -s -f . --no-notify --host 0.0.0.0 --port 9000"
+alias serve="browser-sync start -s -f . --no-notify --host 0.0.0.0 --port 9000"
 
 function gg() {
 	git grep $1 $(git rev-list --all)
