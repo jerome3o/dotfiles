@@ -176,6 +176,18 @@ function gcp(){
 	fi
 	
 	gc "$*"
+	git push
+}
+
+# git commit push force with lease
+function gcpf(){
+
+	if [ -z "$1" ]; then
+		echo Commit message required
+		return 
+	fi
+	
+	gc "$*"
 	gpf
 }
 
