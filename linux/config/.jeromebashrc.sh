@@ -191,7 +191,7 @@ function gb(){
 # looks for ticket in the form AB-123456, more specifically [A-Z]{2}-[0-9]+
 function getticket(){
 	branch=$(git branch --show-current)
-	ticket=$(echo $branch | sed -r 's/.*([A-Z]{2}-[0-9]+).*/\1/')
+	ticket=$(echo $branch | sed -r 's/.*([A-Z]+-[0-9]+).*/\1/')
 	if [ $ticket == $branch ]; then
 		echo none
 	else
