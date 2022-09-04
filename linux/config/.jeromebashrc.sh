@@ -204,7 +204,7 @@ function gb(){
 # looks for ticket in the form AB-123456, more specifically [A-Z]{2}-[0-9]+
 function getticket(){
 	branch=$(git branch --show-current)
-	ticket=$(echo $branch | sed -r 's/.*([A-Z]{2}-[0-9]+).*/\1/')
+	ticket=$(echo $branch | sed -r 's/.*[^A-Z]([A-Z]+-[0-9]+).*/\1/')
 	if [ $ticket == $branch ]; then
 		echo none
 	else
@@ -235,3 +235,29 @@ export PATH="$HOME/gems/bin:$PATH"
 
 # Golang
 export PATH=$PATH:/usr/local/go/bin
+
+venv (){
+	d=$(date +"%D %T" | sed 's/[\/: -]/_/g')
+	mkdir ~/tmp/$d
+	pushd ~/tmp/$d > /dev/null
+	python -m venv ./venv
+	mkdir .vscode
+	echo '{
+		"python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
+		"terminal.activateEnvironment": true
+	}' > ./.vscode/settings.json
+	echo '{
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Python: Current File",
+				"type": "python",
+				"request": "launch",
+				"program": "${file}",
+				"console": "integratedTerminal"
+			}
+		]
+	}' > ./.vscode/launch.json
+	code .
+	popd
+}
