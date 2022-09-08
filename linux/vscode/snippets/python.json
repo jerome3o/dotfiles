@@ -158,5 +158,29 @@
 			"\tunittest.main()",
 			"",
 		]
+	},
+	"ETL Models": {
+		"prefix": ".etlmodel",
+		"body": [
+			"from pydantic import BaseModel",
+			"",
+			"",
+			"class ${ModuleName}ExtractConfig(BaseModel):",
+			"    pass",
+			"",
+			"",
+			"class ${ModuleName}TransformConfig(BaseModel):",
+			"    pass",
+			"",
+			"",
+			"class ${ModuleName}LoadConfig(BaseModel):",
+			"    pass",
+			"",
+			"",
+			"class ${ModuleName}Config(BaseModel):",
+			"    extract: ${ModuleName}ExtractConfig",
+			"    transform: ${ModuleName}TransformConfig",
+			"    load: ${ModuleName}LoadConfig"
+		]
 	}
 }
