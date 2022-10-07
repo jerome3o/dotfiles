@@ -15,11 +15,18 @@
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "explorer.confirmDelete": false,
     "editor.rulers": [
-    100
+        100
     ],
     "editor.formatOnSave": true,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.editorAssociations": {
         "*.wasm": "hexEditor.hexedit"
-    }
+    },
+    "editor.minimap.enabled": false,
+    "explorer.confirmDragAndDrop": false,
+    "jupyter.askForKernelRestart": false,
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ]
 }

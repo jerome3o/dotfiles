@@ -12,18 +12,175 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-	"main": {
+	"Main": {
 		"prefix": ".main",
 		"body": [
 			"def main():",
-			"\tpass$1",
+			"\tpass$0",
+			"",
 			"",
 			"if __name__ == \"__main__\":",
 			"\timport logging",
 			"\tlogging.basicConfig(level=logging.INFO)",
 			"\tmain()",
-			"",
+			""
 		],
-		"description": "main function for python"
+		"description": "If main block"
+	},
+	"plt.show()": {
+		"prefix": "shw",
+		"body": [
+			"# pylint: disable=import-outside-toplevel,multiple-statements",
+			"import matplotlib.pyplot as plt; plt.show()$0",
+		],
+		"description": "cheeky debug plot"
+	},
+	"matplotlib.pyplot": {
+		"prefix": ".plt",
+		"body": [
+			"import matplotlib.pyplot as plt",
+		],
+		"description": "import pyplot"
+	},
+	"pandas": {
+		"prefix": ".pd",
+		"body": [
+			"import pandas as pd",
+		],
+		"description": "pandas"
+	},
+	"numpy": {
+		"prefix": ".np",
+		"body": [
+			"import numpy as np",
+		],
+		"description": "numpy"
+	},
+	"mafs": {
+		"prefix": ".maf",
+		"body": [
+			"import numpy as np",
+			"import pandas as pd",
+			"import matplotlib.pyplot as plt"
+		],
+		"description": "the usual suspects"
+	},
+	"logging": {
+		"prefix": ".log",
+		"body": [
+			"import logging",
+			"_logger = logging.getLogger(__name__)$0"
+		],
+		"description": "import pyplot"
+	},
+	".path": {
+		"prefix": ".path",
+		"body": [
+			"from pathlib import Path"
+		],
+		"description": "import pyplot"
+	},
+	".widget": {
+		"prefix": ".widget",
+		"body": [
+			"from PyQt5.QtWidgets import QWidget",
+			"",
+			"",
+			"class ${1:${WidgetName}}(QWidget):",
+			"    def __init__(self):",
+			"        super().__init__()",
+			"",
+			"        self._create_actions()",
+			"        self._build_ui()",
+			"",
+			"    def _create_actions(self):",
+			"        ${2:${pass}}",
+			"",
+			"    def _build_ui(self):",
+			"        pass",
+			"",
+			"",
+		]
+	},
+	"Inspect in TsDictViewer": {
+		"prefix": ".view",
+		"body": [
+			"from rlpyqtgraph import view; view(${1:${data}})"
+		]
+	},
+	"plargs": {
+		"prefix": ".plargs",
+		"body": [
+			"plugins: List[Plugin] = None,"
+		]
+	},
+	"plinit": {
+		"prefix": ".plinit",
+		"body": [
+			"if plugins is None:",
+			"\tplugins = []"
+		]
+	},
+	"qapp": {
+		"prefix": ".qapp",
+		"body": [
+			"import sys",
+			"from PyQt5.QtWidgets import QApplication",
+			"from rlguitools.helpers import load_style, Style",
+			"",
+			"app = QApplication(sys.argv)",
+			"app.setStyleSheet(load_style(Style.DEFAULT))",
+			"$1",
+			"sys.exit(app.exec())",
+		]
+	},
+	"TODO": {
+		"prefix": "todo",
+		"body": [
+			"# TODO(j.swannack): $1"
+		],
+		"description": "add a todo"
+	},
+	"unittest module": {
+		"prefix": ".test",
+		"body": [
+			"import unittest",
+			"",
+			"",
+			"class Test${1:${ModuleName}}(unittest.TestCase):",
+			"\tdef test_${2:${test_name}}(self):",
+			"\t\t${3:${pass}}",
+			"",
+			"",
+			"if __name__ == \"__main__\":",
+			"\timport logging",
+			"\tlogging.basicConfig(level=logging.INFO)",
+			"\tunittest.main()",
+			"",
+		]
+	},
+	"ETL Models": {
+		"prefix": ".etlmodel",
+		"body": [
+			"from pydantic import BaseModel",
+			"",
+			"",
+			"class ${ModuleName}ExtractConfig(BaseModel):",
+			"    pass",
+			"",
+			"",
+			"class ${ModuleName}TransformConfig(BaseModel):",
+			"    pass",
+			"",
+			"",
+			"class ${ModuleName}LoadConfig(BaseModel):",
+			"    pass",
+			"",
+			"",
+			"class ${ModuleName}Config(BaseModel):",
+			"    extract: ${ModuleName}ExtractConfig",
+			"    transform: ${ModuleName}TransformConfig",
+			"    load: ${ModuleName}LoadConfig"
+		]
 	}
 }
