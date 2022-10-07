@@ -2,7 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-xkbcomp $HOME/.xkbmap $DISPLAY 2> /dev/null
+[ -x /usr/bin/xkbcomp ] && xkbcomp $HOME/.xkbmap $DISPLAY 2> /dev/null
 
 # If not running interactively, don't do anything
 case $- in

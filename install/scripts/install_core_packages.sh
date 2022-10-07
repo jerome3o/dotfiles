@@ -1,8 +1,7 @@
 sudo apt update
 
-# copy dotfiles and append to .bashrc
+# Append to .bashrc
 dest=~
-find "$(pwd)/config" -type f -name ".*" -exec ln -s {} $dest \;
 printf "\n\nif [ -f ~/.jeromebashrc.sh ]; then \n\t. ~/.jeromebashrc.sh \nfi\n" | sudo tee -a "$dest/.bashrc"
 
 # keybinds
@@ -83,7 +82,7 @@ sudo apt-get install -y portaudio19-dev
 
 # ruby (for jekyll)
 sudo apt-get install -y ruby-full build-essential zlib1g-dev
-kvm-ok exported in `.jeromebashrc.sh`
+# kvm-ok exported in `.jeromebashrc.sh`
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 
