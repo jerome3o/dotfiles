@@ -2,6 +2,11 @@
 
 Scripts and dotfiles to configure a fresh Ubuntu install for my usage
 
+Dotfires can be installed with `stow`.
+
+`sudo apt install stow`
+
+`stow bash`
 
 # Other things
 
