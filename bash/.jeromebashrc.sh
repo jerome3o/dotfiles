@@ -65,6 +65,7 @@ shopt -s no_empty_cmd_completion
 
 ## Alias'
 
+alias g="git"
 alias Q='setxkbmap'
 alias hk='cd && ./.hotkeys_on.sh && cd -'
 alias gs='git status'

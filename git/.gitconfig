@@ -1,0 +1,39 @@
+[user]
+	email = jeromeswannack@gmail.com
+	name = Jerome Swannack
+[core]
+	editor = vim
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = true
+[alias]
+	co = checkout
+	cob = checkout -b
+	b = branch
+	br = branch -r
+	ba = branch -a
+	r = remote
+	rw = remote -v show
+	ra = remote add
+	pro = remote prune origin
+	c = commit -v
+	s = status -s
+	st = status
+	stv = status -v
+	stvv = status -vv
+	last = log --oneline --decorate -1 HEAD
+	unstage = reset HEAD --
+	a = add
+	aa = add -A
+	fl = log -u
+	lg = log --oneline --decorate --all --graph
+	ls = log --oneline --decorate
+	lsv = log --pretty=format:'%C(auto)%h %d %s %C(green)(%cr) %C(blue)<%aN>'
+	ll = log --oneline --decorate --stat
+	llv = log --pretty=format:'%C(auto)%h %d %s %C(green)(%cr) %C(blue)<%aN>' --stat
+	la = "!git config -l | grep alias | cut -c 7-"
+
