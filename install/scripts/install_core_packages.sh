@@ -22,6 +22,10 @@ git config --global user.email "jeromeswannack@gmail.com"
 git config --global user.name "Jerome Swannack"
 git config --global core.editor "vim"
 
+# tmux
+sudo apt install tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # htop
 sudo apt-get install -y htop
 
