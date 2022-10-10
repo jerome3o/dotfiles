@@ -73,7 +73,7 @@ alias Q='setxkbmap'
 alias hk='cd && ./.hotkeys_on.sh && cd -'
 alias gs='git status'
 alias hk='~/.hotkeys_on.sh'
-alias lenv='export $(cat <repo path>/.env | xargs)'
+alias lenv='export $(cat .env | xargs)'
 alias serve="browser-sync start -s -f . --no-notify --host 0.0.0.0 --port 9000"
 
 
