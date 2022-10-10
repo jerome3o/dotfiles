@@ -25,6 +25,8 @@ export PATH="$HOME/gems/bin:$PATH"
 # Golang
 export PATH=$PATH:/usr/local/go/bin
 
+# Editor
+export EDITOR=nvim
 
 ## Shell Options
 
@@ -65,6 +67,7 @@ shopt -s no_empty_cmd_completion
 
 ## Alias'
 
+alias nv="nvim"
 alias g="git"
 alias Q='setxkbmap'
 alias hk='cd && ./.hotkeys_on.sh && cd -'
