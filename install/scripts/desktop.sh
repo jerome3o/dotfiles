@@ -13,24 +13,11 @@ sudo apt-get install -y flameshot
 # vlc
 sudo apt-get install -y vlc
 
-# neovim
-# Need version 0.5.x or higher to use packer.nvim
-sudo add-apt-repository ppa:neovim-ppa/stable
-sudo apt-get update
-sudo apt-get install neovim
-
-git clone --depth 1 https://github.com/wbthomason/packer.nvim \
-	~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
 # git
 sudo apt-get install -y git
 git config --global user.email "jeromeswannack@gmail.com"
 git config --global user.name "Jerome Swannack"
 git config --global core.editor "vim"
-
-# tmux
-sudo apt install tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # htop
 sudo apt-get install -y htop

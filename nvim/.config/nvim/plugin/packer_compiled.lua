@@ -74,20 +74,20 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["nvim-tree.lua"] = {
+  nerdtree = {
     loaded = true,
-    path = "/home/jerome/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
-    url = "https://github.com/nvim-tree/nvim-tree.lua"
-  },
-  ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/home/jerome/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/nvim-tree/nvim-web-devicons"
+    path = "/home/jerome/.local/share/nvim/site/pack/packer/start/nerdtree",
+    url = "https://github.com/preservim/nerdtree"
   },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/jerome/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  tagbar = {
+    loaded = true,
+    path = "/home/jerome/.local/share/nvim/site/pack/packer/start/tagbar",
+    url = "https://github.com/preservim/tagbar"
   }
 }
 

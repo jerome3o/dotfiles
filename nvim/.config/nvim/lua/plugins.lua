@@ -22,12 +22,9 @@ vim.cmd([[
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   
-  use {
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons', -- optional, for file icons
-    },
-  }
+  use "preservim/nerdtree"
+  use "preservim/tagbar"
+  use "ryanoasis/vim-devicons"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
