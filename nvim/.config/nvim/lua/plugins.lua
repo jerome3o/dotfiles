@@ -25,6 +25,12 @@ return require('packer').startup(function(use)
   use "preservim/nerdtree"
   use "preservim/tagbar"
   use "ryanoasis/vim-devicons"
+  use "tpope/vim-commentary"
+  use "neovim/nvim-lspconfig"
+  -- use {
+  --   "neoclide/coc.nvim",
+  --   run = "yarn install --frozen-lockfile"
+  -- }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

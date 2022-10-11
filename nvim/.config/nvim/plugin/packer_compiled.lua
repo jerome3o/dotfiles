@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/jerome/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/preservim/nerdtree"
   },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/jerome/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/jerome/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -88,6 +93,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jerome/.local/share/nvim/site/pack/packer/start/tagbar",
     url = "https://github.com/preservim/tagbar"
+  },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/home/jerome/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    url = "https://github.com/tpope/vim-commentary"
+  },
+  ["vim-devicons"] = {
+    loaded = true,
+    path = "/home/jerome/.local/share/nvim/site/pack/packer/start/vim-devicons",
+    url = "https://github.com/ryanoasis/vim-devicons"
   }
 }
 
