@@ -64,9 +64,19 @@ shopt -s dirspell
 shopt -s no_empty_cmd_completion
 
 
+## Completions
+
+source /usr/share/bash-completion/completions/git
+if [[ $(type -t compopt) == "builtin" ]]; then
+	complete -o default -F _git g
+else
+	complete -o default -o nospace -F _git g
+fi
+
 
 ## Alias'
 
+alias vv=". venv/bin/activate"
 alias nv="nvim"
 alias g="git"
 alias Q='setxkbmap'
