@@ -1,9 +1,5 @@
 sudo apt update
 
-# Append to .bashrc
-dest=~
-printf "\n\nif [ -f ~/.jeromebashrc.sh ]; then \n\t. ~/.jeromebashrc.sh \nfi\n" | sudo tee -a "$dest/.bashrc"
-
 # keybinds
 sudo apt-get install -y xcape xbindkeys
 
