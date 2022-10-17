@@ -6,6 +6,8 @@ if [ -f ~/.jeromebashrc.sh ]; then
 fi
 EOF
 
+git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
+
 . ~/scripts/nvim.sh
 . ~/scripts/tmux.sh
 . ~/scripts/fonts.sh
