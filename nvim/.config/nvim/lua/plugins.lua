@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
   use "preservim/tagbar"
   use "ryanoasis/vim-devicons"
   use "tpope/vim-commentary"
-  use "neovim/nvim-lspconfig"
+  -- use "neovim/nvim-lspconfig"
   use "mg979/vim-visual-multi"
   -- use {
   --   "neoclide/coc.nvim",
