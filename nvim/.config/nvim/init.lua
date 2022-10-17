@@ -1,8 +1,12 @@
 require("plugins")
 -- require("lspkeybinds")
 
-local function map(m, k, v)
-  vim.keymap.set(m, k, v, {silent = true})
+function map(mode, lhs, rhs, opts)
+    local options = { noremap = true }
+    if opts then
+        options = vim.tbl_extend("force", options, opts)
+    end
+    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 map('n', '-', ':NERDTree<CR>')
