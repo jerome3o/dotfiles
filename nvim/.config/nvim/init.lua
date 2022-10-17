@@ -1,5 +1,5 @@
 require("plugins")
-require("lspkeybinds")
+-- require("lspkeybinds")
 
 vim.cmd([[
   set number relativenumber
