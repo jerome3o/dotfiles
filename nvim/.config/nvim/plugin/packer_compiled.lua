@@ -103,6 +103,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jerome/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
+  },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/home/jerome/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
   }
 }
 
