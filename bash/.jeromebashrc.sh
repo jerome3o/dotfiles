@@ -84,6 +84,7 @@ fi
 
 ## Alias'
 
+alias t="tmux"
 alias i="sudo apt install"
 alias vv=". venv/bin/activate"
 alias nv="nvim"
