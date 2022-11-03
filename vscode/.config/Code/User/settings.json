@@ -28,5 +28,6 @@
     "jupyter.widgetScriptSources": [
         "jsdelivr.com",
         "unpkg.com"
-    ]
+    ],
+    "files.trimTrailingWhitespace": true
 }
