@@ -74,19 +74,12 @@ fi
 
 ## Completions
 
-source /usr/share/bash-completion/completions/git
-if [[ $(type -t compopt) == "builtin" ]]; then
-	complete -o default -F _git g
-else
-	complete -o default -o nospace -F _git g
-fi
-
 
 ## Alias'
 
+alias dka="docker ps -q | xargs docker kill"
 alias t="tmux"
 alias i="sudo apt install"
-alias vv=". venv/bin/activate"
 alias nv="nvim"
 alias g="git"
 alias Q='setxkbmap'
@@ -99,6 +92,21 @@ alias rs="rsync -rah --progress"
 
 
 ## Functions
+
+# alias vv=". venv/bin/activate"
+
+function vv() {
+	if [ -f ./venv/bin/activate ]; then
+		. ./venv/bin/activate
+		return 0
+	fi
+	if [ -f ./.venv/bin/activate ]; then
+		. ./.venv/bin/activate
+		return 0
+	fi
+	return 1
+	
+}
 
 function gg() {
 	git grep $1 $(git rev-list --all)
@@ -218,6 +226,6 @@ function getcommitprefix(){
 
 ## Tmux Entry
 
-# if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
-#     tmux attach || tmux >/dev/null 2>&1
-# fi
+if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ] && [ -z ${TERM_PROGRAM+x} ]; then
+    tmux attach || tmux >/dev/null 2>&1
+fi
