@@ -78,6 +78,7 @@ fi
 ## Alias'
 
 alias dka="docker ps -q | xargs docker kill"
+alias ll="ls -latr"
 alias t="tmux"
 alias i="sudo apt install"
 alias nv="nvim"
