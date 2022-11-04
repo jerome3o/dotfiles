@@ -29,5 +29,7 @@
         "jsdelivr.com",
         "unpkg.com"
     ],
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true
 }
