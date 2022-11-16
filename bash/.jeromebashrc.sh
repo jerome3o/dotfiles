@@ -79,6 +79,8 @@ __git_complete g __git_main
 
 ## Alias'
 
+alias pbcopy='xclip -selection c'             # OSX script compatibility
+alias pbpaste='xclip -selection clipboard -o' # OSX script compatibility
 alias dka="docker ps -q | xargs docker kill"
 alias ll="ls -latr"
 alias t="tmux"
@@ -230,5 +232,5 @@ function getcommitprefix(){
 ## Tmux Entry
 
 if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ] && [ -z ${TERM_PROGRAM+x} ]; then
-    tmux attach || tmux >/dev/null 2>&1
+    tmux >/dev/null 2>&1
 fi
