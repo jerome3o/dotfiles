@@ -232,6 +232,6 @@ function getcommitprefix(){
 
 ## Tmux Entry
 
-if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ] && [ -z ${TERM_PROGRAM+x} ]; then
-    tmux >/dev/null 2>&1
-fi
+# if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ] && [ -z ${TERM_PROGRAM+x} ]; then
+#     tmux >/dev/null 2>&1
+# fi
