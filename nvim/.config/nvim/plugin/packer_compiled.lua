@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/home/jerome/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/preservim/nerdtree"
   },
-  ["nvim-lspconfig"] = {
-    loaded = true,
-    path = "/home/jerome/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
-    url = "https://github.com/neovim/nvim-lspconfig"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/jerome/.local/share/nvim/site/pack/packer/start/packer.nvim",
