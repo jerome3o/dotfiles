@@ -100,6 +100,9 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
+# container layout
+bindsym $mod+p layout toggle
+
 # focus the child container
 #bindsym $mod+d focus child
 
@@ -252,8 +255,6 @@ for_window [class="Firefox" instance="SessionManager"] move workspace current
 # Clipit clipboard
 exec --no-startup-id clipit
 
-# Auto-start firefox on workspace 1
-exec --no-startup-id gnome-terminal
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
