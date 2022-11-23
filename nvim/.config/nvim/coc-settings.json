@@ -1,0 +1,11 @@
+{
+  "jedi.enable": true,
+  "jedi.jediSettings.caseInsensitiveCompletion": true,
+  "jedi.workspace.symbols.ignoreFolders": [
+    ".nox",
+    ".tox",
+    ".venv",
+    "__pycache__",
+    "venv"
+  ]
+}
