@@ -28,10 +28,10 @@ return require('packer').startup(function(use)
   use "tpope/vim-commentary"
   -- use "neovim/nvim-lspconfig"
   use "mg979/vim-visual-multi"
-  -- use {
-  --   "neoclide/coc.nvim",
-  --   run = "yarn install --frozen-lockfile"
-  -- }
+  use {
+    "neoclide/coc.nvim",
+    run = "yarn install --frozen-lockfile"
+  }
 
   use "junegunn/fzf.vim"
   use "junegunn/fzf"
