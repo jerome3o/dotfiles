@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
   -- }
 
   use "junegunn/fzf.vim"
+  use "junegunn/fzf"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

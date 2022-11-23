@@ -10,6 +10,7 @@ function map(mode, lhs, rhs, opts)
 end
 
 map('n', '-', ':NERDTree<CR>')
+map('n', '<C-p>', ':Files<CR>')
 
 vim.cmd([[
   set number relativenumber
