@@ -1,4 +1,5 @@
 require("plugins")
+require("coc")
 -- require("lspkeybinds")
 
 function map(mode, lhs, rhs, opts)
