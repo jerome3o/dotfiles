@@ -10,5 +10,6 @@
   ],
   "snippets.textmateSnippetsRoots": [
 	  "~/.config/Code/User/snippets"
-  ]
+  ],
+  "snippets.ultisnips.pythonPrompt": false
 }
