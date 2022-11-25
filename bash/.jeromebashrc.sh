@@ -83,7 +83,7 @@ alias pbcopy='xclip -selection c'             # OSX script compatibility
 alias pbpaste='xclip -selection clipboard -o' # OSX script compatibility
 alias xc="xcape -e 'Shift_L=parenleft;Shift_R=parenright'"
 alias dka="docker ps -q | xargs docker kill"
-alias ll="ls -latr"
+alias ll="ls -latrh"
 alias t="tmux"
 alias i="sudo apt install"
 alias nv="nvim"
