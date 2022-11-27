@@ -28,6 +28,9 @@ export PATH=$PATH:/usr/local/go/bin
 # Editor
 export EDITOR=nvim
 
+# SSH agent
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 ## Shell Options
 
 # append to the history file, don't overwrite it
