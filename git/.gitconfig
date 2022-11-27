@@ -38,3 +38,5 @@
 	la = "!git config -l | grep alias | cut -c 7-"
 [includeIf "gitdir:/home/j.swannack/"]
 	path = .gitconfig.rl
+[credential]
+	helper = store
