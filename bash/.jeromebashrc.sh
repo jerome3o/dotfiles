@@ -25,6 +25,9 @@ export PATH="$HOME/gems/bin:$PATH"
 # Golang
 export PATH=$PATH:/usr/local/go/bin
 
+# .local/bin
+export PATH="$PATH:$HOME/.local/bin"
+
 # Editor
 export EDITOR=nvim
 
