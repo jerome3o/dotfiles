@@ -1,5 +1,5 @@
 require("plugins")
--- require("coc")
+require("coc")
 -- require("lspkeybinds")
 function map(mode, lhs, rhs, opts)
     local options = { noremap = true }
