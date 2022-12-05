@@ -29,7 +29,7 @@ nvm alias default 14.17.0
 Run packer install with `:PackerInstall` in nvim, this might fail, if so this might help:
 
 ```
-cd .local/share/nvim/site/pack/packer/start/coc.nvim/
+cd ~/.local/share/nvim/site/pack/packer/start/coc.nvim/
 npm install -g yarn
 yarn install 
 yarn build
