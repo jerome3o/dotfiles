@@ -117,7 +117,7 @@ function vv() {
 		return 0
 	fi
 	return 1
-	
+
 }
 
 function gg() {
@@ -166,17 +166,17 @@ function gad(){
 
 # git ammend
 function gam(){
-	git commit --amend --no-edit; 
+	git commit --amend --no-edit;
 }
 
 # git commit
 function gc(){
 	if [ -z "$1" ]; then
 		echo Commit message required
-		return 
+		return
 	fi
 	msg="$*"
-	git commit -m "$(getcommitprefix)$msg"; 
+	git commit -m "$(getcommitprefix)$msg";
 }
 
 # git push force
@@ -189,7 +189,7 @@ function gpf(){
 function gcp(){
 	if [ -z "$1" ]; then
 		echo Commit message required
-		return 
+		return
 	fi
 	gc "$*"
 	git push
@@ -199,7 +199,7 @@ function gcp(){
 function gcpf(){
 	if [ -z "$1" ]; then
 		echo Commit message required
-		return 
+		return
 	fi
 	gc "$*"
 	gpf
