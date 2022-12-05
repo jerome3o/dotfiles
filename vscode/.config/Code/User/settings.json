@@ -1,38 +1,36 @@
 {
-    "security.workspace.trust.untrustedFiles": "open",
-    "cSpell.enabledLanguageIds": [
-        "asciidoc",
-        "git-commit",
-        "jupyter",
-        "latex",
-        "markdown",
-        "plaintext",
-        "restructuredtext",
-        "text"
-    ],
-    "git.confirmSync": false,
-    "go.toolsManagement.autoUpdate": true,
-    "terminal.integrated.enableMultiLinePasteWarning": false,
-    "explorer.confirmDelete": false,
-    "editor.rulers": [
-        100
-    ],
-    "editor.formatOnSave": true,
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.editorAssociations": {
-        "*.wasm": "hexEditor.hexedit"
-    },
-    "editor.minimap.enabled": false,
-    "explorer.confirmDragAndDrop": false,
-    "jupyter.askForKernelRestart": false,
-    "jupyter.widgetScriptSources": [
-        "jsdelivr.com",
-        "unpkg.com"
-    ],
-    "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+  "security.workspace.trust.untrustedFiles": "open",
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "git-commit",
+    "jupyter",
+    "latex",
+    "markdown",
+    "plaintext",
+    "restructuredtext",
+    "text"
+  ],
+  "git.confirmSync": false,
+  "go.toolsManagement.autoUpdate": true,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "explorer.confirmDelete": false,
+  "editor.rulers": [100],
+  "editor.formatOnSave": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editorAssociations": {
+    "*.wasm": "hexEditor.hexedit"
+  },
+  "editor.minimap.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "jupyter.askForKernelRestart": false,
+  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  }
 }
