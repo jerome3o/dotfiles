@@ -26,7 +26,7 @@ return require('packer').startup(function(use)
   use "preservim/tagbar"
   use "ryanoasis/vim-devicons"
   use "tpope/vim-commentary"
-  use "tpope/vim-fugitive"
+  use "lewis6991/gitsigns.nvim"
   -- use "neovim/nvim-lspconfig"
   use "mg979/vim-visual-multi"
   use {
