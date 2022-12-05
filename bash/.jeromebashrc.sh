@@ -32,7 +32,12 @@ export PATH="$PATH:$HOME/.local/bin"
 export EDITOR=nvim
 
 # # SSH agent
-if [ -z ${SSH_AUTH_SOCK+x} ]; then export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"; fi
+if [ -z ${SSH_AUTH_SOCK+x} ]; then 
+	export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+fi
+if [ "$SSH_AUTH_SOCK" != ~/.ssh/ssh_auth_sock ]; then
+	ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
+fi
 
 
 ## Shell Options
