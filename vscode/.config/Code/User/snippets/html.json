@@ -28,5 +28,11 @@
       "</body>",
       "</html>",
     ]
+  },
+  "css": {
+	"prefix": "css",
+	"body": [
+		"<link rel=\"stylesheet\" href=\"index.css\">"
+	]
   }
 }
