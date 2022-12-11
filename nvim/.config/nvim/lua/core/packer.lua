@@ -60,9 +60,14 @@ return require('packer').startup(function(use)
 
   -- autocompletion and other language server stuff
   use {
-    "neoclide/coc.nvim",
-    run = "yarn install --frozen-lockfile"
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
   }
+  -- use {
+  --   "neoclide/coc.nvim",
+  --   run = "yarn install --frozen-lockfile"
+  -- }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
