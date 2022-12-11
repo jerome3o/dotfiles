@@ -4,7 +4,7 @@ require("core.packer")
 
 require("plugins.nvim-tree")
 require("plugins.fzf")
--- require("plugins.coc")
+require("plugins.coc")
 require("plugins.vim-visual-multi")
 require("plugins.monokai")
 require("plugins.lualine")
