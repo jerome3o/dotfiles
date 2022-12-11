@@ -1,3 +1,4 @@
 .env
 scratch/
 nvim/.config/nvim/plugin/packer_compiled.lua
+ssh/.config/systemd/user/default.target.wants
