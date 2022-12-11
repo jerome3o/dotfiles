@@ -44,6 +44,9 @@ return require('packer').startup(function(use)
   -- power line
   use "nvim-lualine/lualine.nvim"
 
+  -- syntax highlighting
+  use 'nvim-treesitter/nvim-treesitter'
+
   -- preview git changes in the sidebar TODO: fix
   -- use {
   --   'lewis6991/gitsigns.nvim',
@@ -54,6 +57,8 @@ return require('packer').startup(function(use)
   
   -- multi cursor!
   use "mg979/vim-visual-multi"
+
+  -- autocompletion and other language server stuff
   use {
     "neoclide/coc.nvim",
     run = "yarn install --frozen-lockfile"
