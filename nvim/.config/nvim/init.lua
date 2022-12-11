@@ -1,20 +1,10 @@
-require("plugins")
-require("coc")
--- require("lspkeybinds")
-function map(mode, lhs, rhs, opts)
-    local options = { noremap = true }
-    if opts then
-        options = vim.tbl_extend("force", options, opts)
-    end
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
-end
+require("core.keymaps")
+require("core.opts")
+require("core.packer")
 
-vim.opt.listchars = 'tab:▸ ,eol:¬,space:.'
-
-map('n', '-', ':NERDTree<CR>')
-map('n', '<C-p>', ':Files<CR>')
-map('n', '<leader>l', ':set list!<CR>')
-
-vim.cmd([[
-  set number relativenumber
-]])
+require("plugins.nvim-tree")
+require("plugins.fzf")
+require("plugins.coc")
+require("plugins.vim-visual-multi")
+require("plugins.monokai")
+require("plugins.lualine")
