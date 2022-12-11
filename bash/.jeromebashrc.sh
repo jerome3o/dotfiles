@@ -91,6 +91,8 @@ __git_complete g __git_main
 
 ## Alias'
 
+alias fcd='cd $(find . -type d -print | fzf)'
+alias kc="kubectx"
 alias pbcopy='xclip -selection c'             # OSX script compatibility
 alias pbpaste='xclip -selection clipboard -o' # OSX script compatibility
 alias xc="xcape -e 'Shift_L=parenleft;Shift_R=parenright'"
