@@ -65,6 +65,7 @@ return require('packer').startup(function(use)
     "neovim/nvim-lspconfig",
   }
 
+  -- lsp configuration, snippets, autocompletion
   use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
@@ -84,6 +85,15 @@ return require('packer').startup(function(use)
       -- Snippets
       { 'L3MON4D3/LuaSnip' },
       { 'rafamadriz/friendly-snippets' },
+    }
+  }
+
+  -- python debugger
+
+  use {
+    "mfussenegger/nvim-dap-python",
+    requires = {
+      "mfussenegger/nvim-dap"
     }
   }
 
