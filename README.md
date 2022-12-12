@@ -8,6 +8,10 @@ Dotfires can be installed with `stow`.
 
 `stow bash`
 
+# TODO
+
+Follow [this guide](https://dev.to/vonheikemen/getting-started-with-neovims-native-lsp-client-in-the-year-of-2022-the-easy-way-bp3) for nvim
+
 # Other things
 
 ## Configure Sound / Alsa
