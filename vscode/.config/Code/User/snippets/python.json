@@ -1,17 +1,4 @@
 {
-	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
 	"Main": {
 		"prefix": ".main",
 		"body": [
@@ -31,28 +18,28 @@
 		"prefix": "shw",
 		"body": [
 			"# pylint: disable=import-outside-toplevel,multiple-statements",
-			"import matplotlib.pyplot as plt; plt.show()$0",
+			"import matplotlib.pyplot as plt; plt.show()$0"
 		],
 		"description": "cheeky debug plot"
 	},
 	"matplotlib.pyplot": {
 		"prefix": ".plt",
 		"body": [
-			"import matplotlib.pyplot as plt",
+			"import matplotlib.pyplot as plt"
 		],
 		"description": "import pyplot"
 	},
 	"pandas": {
 		"prefix": ".pd",
 		"body": [
-			"import pandas as pd",
+			"import pandas as pd"
 		],
 		"description": "pandas"
 	},
 	"numpy": {
 		"prefix": ".np",
 		"body": [
-			"import numpy as np",
+			"import numpy as np"
 		],
 		"description": "numpy"
 	},
@@ -99,7 +86,7 @@
 			"    def _build_ui(self):",
 			"        pass",
 			"",
-			"",
+			""
 		]
 	},
 	"Inspect in TsDictViewer": {
@@ -131,7 +118,7 @@
 			"app = QApplication(sys.argv)",
 			"app.setStyleSheet(load_style(Style.DEFAULT))",
 			"$1",
-			"sys.exit(app.exec())",
+			"sys.exit(app.exec())"
 		]
 	},
 	"TODO": {
@@ -156,7 +143,7 @@
 			"\timport logging",
 			"\tlogging.basicConfig(level=logging.INFO)",
 			"\tunittest.main()",
-			"",
+			""
 		]
 	},
 	"ETL Models": {

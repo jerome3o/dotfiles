@@ -48,12 +48,12 @@ return require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter'
 
   -- preview git changes in the sidebar TODO: fix
-  -- use {
-  --   'lewis6991/gitsigns.nvim',
-  --   config = function()
-  --     require('gitsigns').setup()
-  --   end
-  -- }
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
 
   -- multi cursor!
   use "mg979/vim-visual-multi"
