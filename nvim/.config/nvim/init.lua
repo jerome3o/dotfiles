@@ -1,6 +1,6 @@
 require("core.keymaps")
-require("core.opts")
 require("core.packer")
+require("core.opts")
 
 require("plugins.nvim-tree")
 require("plugins.fzf")
@@ -12,3 +12,4 @@ require("plugins.lsp_config")
 require("plugins.dap_config")
 require("plugins.luasnips_config")
 require("plugins.lsp_zero_config")
+
