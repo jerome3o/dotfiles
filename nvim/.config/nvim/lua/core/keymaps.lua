@@ -7,12 +7,22 @@ vim.g.maplocalleader = ' '
 -- clear highlight
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
--- show whitespace
-vim.keymap.set('n', '<leader>l', ':set list!<CR>')
-
 -- close tab
 vim.keymap.set('n', '<leader>w', ':wq<CR>')
 
+-- General editor stuff
+vim.keymap.set('n', '<C-s>', ":w<CR>")
+vim.keymap.set('i', '<C-s>', "<ESC>:w<CR>a")
+vim.keymap.set('n', '<M-left>', "<C-o>")
+vim.keymap.set('n', '<M-right>', "<C-i>")
+vim.keymap.set('i', '<M-left>', "<ESC><C-o>i")
+vim.keymap.set('i', '<M-right>', "<ESC><C-i>i")
+vim.keymap.set('v', '(', "c()<ESC>P")
+vim.keymap.set('v', '[', "c[]<ESC>P")
+vim.keymap.set('v', '{', "c{}<ESC>P")
+
+vim.keymap.set('n', '<leader>l', ":tabn<CR>")
+vim.keymap.set('n', '<leader>h', ":tabp<CR>")
 
 -- tabs
 vim.keymap.set('n', '<leader>1', '1gt')
