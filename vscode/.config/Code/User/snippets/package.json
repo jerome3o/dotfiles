@@ -6,6 +6,18 @@
   "contributes": {
     "snippets": [
       {
+        "language": "html",
+        "path": "./html.json"
+      },
+      {
+        "language": "yaml",
+        "path": "./yaml.json"
+      },
+      {
+        "language": "go",
+        "path": "./go.json"
+      },
+      {
         "language": "python",
         "path": "./python.json"
       }
