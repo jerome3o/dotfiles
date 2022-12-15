@@ -24,6 +24,9 @@ vim.keymap.set('v', '{', "c{}<ESC>P")
 vim.keymap.set('n', '<leader>l', ":tabn<CR>")
 vim.keymap.set('n', '<leader>h', ":tabp<CR>")
 
+vim.keymap.set('n', '<leader>j', "<C-w>j")
+vim.keymap.set('n', '<leader>k', "<C-w>k")
+
 -- tabs
 vim.keymap.set('n', '<leader>1', '1gt')
 vim.keymap.set('n', '<leader>2', '2gt')
