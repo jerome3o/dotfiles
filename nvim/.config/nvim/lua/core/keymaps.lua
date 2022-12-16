@@ -5,7 +5,7 @@ vim.g.maplocalleader = ' '
 -- misc keymaps
 
 -- clear highlight
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+vim.keymap.set('n', '<leader>/', ':nohlsearch<CR>')
 
 -- close tab
 vim.keymap.set('n', '<leader>w', ':wq<CR>')
@@ -17,15 +17,20 @@ vim.keymap.set('n', '<M-left>', "<C-o>")
 vim.keymap.set('n', '<M-right>', "<C-i>")
 vim.keymap.set('i', '<M-left>', "<ESC><C-o>i")
 vim.keymap.set('i', '<M-right>', "<ESC><C-i>i")
-vim.keymap.set('v', '(', "c()<ESC>P")
-vim.keymap.set('v', '[', "c[]<ESC>P")
-vim.keymap.set('v', '{', "c{}<ESC>P")
+vim.keymap.set('v', '<leader>(', "c()<ESC>P")
+vim.keymap.set('v', '<leader>[', "c[]<ESC>P")
+vim.keymap.set('v', '<leader>{', "c{}<ESC>P")
+vim.keymap.set('v', '<leader>"', 'c""<ESC>P')
+vim.keymap.set('v', "<leader>'", "c''<ESC>P")
 
 vim.keymap.set('n', '<leader>l', ":tabn<CR>")
 vim.keymap.set('n', '<leader>h', ":tabp<CR>")
 
 vim.keymap.set('n', '<leader>j', "<C-w>j")
 vim.keymap.set('n', '<leader>k', "<C-w>k")
+
+-- Don't yank when deleting!
+vim.keymap.set('n', 'd', '"_d')
 
 -- tabs
 vim.keymap.set('n', '<leader>1', '1gt')
