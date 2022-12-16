@@ -111,7 +111,7 @@ alias hk='~/.hotkeys_on.sh'
 alias lenv='export $(cat .env | xargs)'
 alias serve="browser-sync start -s -f . --no-notify --host 0.0.0.0 --port 9000"
 alias rs="rsync -rah --progress"
-alias vvv="python -m venv venv"
+alias vvv="python3 -m venv venv"
 
 ## Functions
 
