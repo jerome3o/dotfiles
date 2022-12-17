@@ -11,28 +11,47 @@ vim.keymap.set('n', '<leader>/', ':nohlsearch<CR>')
 vim.keymap.set('n', '<leader>w', ':wq<CR>')
 
 -- General editor stuff
+--- saving
 vim.keymap.set('n', '<C-s>', ":w<CR>")
 vim.keymap.set('i', '<C-s>', "<ESC>:w<CR>a")
+
+--- back/forward navigation
 vim.keymap.set('n', '<M-left>', "<C-o>")
 vim.keymap.set('n', '<M-right>', "<C-i>")
 vim.keymap.set('i', '<M-left>', "<ESC><C-o>i")
 vim.keymap.set('i', '<M-right>', "<ESC><C-i>i")
+
+--- surrounding selection with ([{'"
 vim.keymap.set('v', '<leader>(', "c()<ESC>P")
 vim.keymap.set('v', '<leader>[', "c[]<ESC>P")
 vim.keymap.set('v', '<leader>{', "c{}<ESC>P")
 vim.keymap.set('v', '<leader>"', 'c""<ESC>P')
 vim.keymap.set('v', "<leader>'", "c''<ESC>P")
 
+--- some handy nav shortcuts for tabs/windows
 vim.keymap.set('n', '<leader>l', ":tabn<CR>")
 vim.keymap.set('n', '<leader>h', ":tabp<CR>")
-
 vim.keymap.set('n', '<leader>j', "<C-w>j")
 vim.keymap.set('n', '<leader>k', "<C-w>k")
+
+--- selection, adding shift+navigation binds
+vim.keymap.set('n', '<S-up>', "v<UP>")
+vim.keymap.set('v', '<S-up>', "<UP>")
+vim.keymap.set('n', '<S-down>', "v<DOWN>")
+vim.keymap.set('v', '<S-down>', "<DOWN>")
+
+vim.keymap.set('n', '<S-home>', "v<HOME>")
+vim.keymap.set('n', '<S-end>', "v<END>")
+vim.keymap.set('n', '<S-left>', "vh")
+vim.keymap.set('v', '<S-left>', "h")
+vim.keymap.set('n', '<S-right>', "vl")
+vim.keymap.set('v', '<S-right>', "l")
+
 
 -- Don't yank when deleting!
 vim.keymap.set('n', 'd', '"_d')
 
--- tabs
+-- Tabs navigation
 vim.keymap.set('n', '<leader>1', '1gt')
 vim.keymap.set('n', '<leader>2', '2gt')
 vim.keymap.set('n', '<leader>3', '3gt')

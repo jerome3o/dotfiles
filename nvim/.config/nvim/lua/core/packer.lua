@@ -96,11 +96,8 @@ return require('packer').startup(function(use)
       "mfussenegger/nvim-dap"
     }
   }
-
-  -- use {
-  --   "neoclide/coc.nvim",
-  --   run = "yarn install --frozen-lockfile"
-  -- }
+  
+  use 'Vimjas/vim-python-pep8-indent'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

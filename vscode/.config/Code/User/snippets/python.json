@@ -14,6 +14,14 @@
 		],
 		"description": "If main block"
 	},
+	"__init__": {
+		"prefix": ".init",
+		"body": [
+      "def __init__(self):",
+      "\tpass"
+		],
+		"description": "cheeky debug plot"
+	},
 	"plt.show()": {
 		"prefix": "shw",
 		"body": [
