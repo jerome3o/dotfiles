@@ -48,8 +48,9 @@ vim.keymap.set('n', '<S-right>', "vl")
 vim.keymap.set('v', '<S-right>', "l")
 
 
--- Don't yank when deleting!
-vim.keymap.set('n', 'd', '"_d')
+-- Paste from yank reg
+vim.keymap.set('n', '<leader>p', '"0p')
+vim.keymap.set('n', '<leader>P', '"0P')
 
 -- Tabs navigation
 vim.keymap.set('n', '<leader>1', '1gt')
