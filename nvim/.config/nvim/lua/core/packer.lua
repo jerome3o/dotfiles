@@ -88,6 +88,9 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- linting
+  use 'mfussenegger/nvim-lint'
+
   -- python debugger
 
   use {
@@ -96,7 +99,7 @@ return require('packer').startup(function(use)
       "mfussenegger/nvim-dap"
     }
   }
-  
+  -- python indentation, not sure if this works
   use 'Vimjas/vim-python-pep8-indent'
 
   -- Automatically set up your configuration after cloning packer.nvim

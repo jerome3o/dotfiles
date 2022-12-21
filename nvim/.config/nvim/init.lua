@@ -12,4 +12,5 @@ require("plugins.lsp_config")
 require("plugins.dap_config")
 require("plugins.luasnips_config")
 require("plugins.lsp_zero_config")
+require("plugins.lint")
 
