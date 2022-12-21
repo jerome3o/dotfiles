@@ -7,5 +7,4 @@ lsp.set_preferences({
   suggest_lsp_servers = false
 })
 
-
 lsp.setup()
