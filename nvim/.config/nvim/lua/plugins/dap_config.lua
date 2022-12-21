@@ -21,6 +21,11 @@ local map = function(m, lhs, rhs)
   vim.keymap.set(m, lhs, rhs, opts)
 end
 
+vim.fn.sign_define(
+  'DapBreakpoint',
+  {text='🛑', texthl='', linehl='', numhl=''}
+)
+
 map('n', '<F5>', ':lua require"dap".continue()<CR>')
 map('n', '<F9>', ':lua require"dap".toggle_breakpoint()<CR>')
 map('n', '<F10>', ':lua require"dap".step_over()<CR>')
