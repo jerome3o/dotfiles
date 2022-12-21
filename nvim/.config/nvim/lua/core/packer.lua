@@ -91,6 +91,15 @@ return require('packer').startup(function(use)
   -- linting
   use 'mfussenegger/nvim-lint'
 
+
+  -- null-ls, allows implementation of lsp functionality from lua
+  use { "jose-elias-alvarez/null-ls.nvim",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("_null-ls")
+    end
+  }
+
   -- python debugger
 
   use {
