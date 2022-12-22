@@ -1,5 +1,7 @@
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   callback = function()
-    vim.lsp.buf.format()
+    if vim.lsp.buf.server_ready() then
+      vim.lsp.buf.format()
+    end
   end,
 })
