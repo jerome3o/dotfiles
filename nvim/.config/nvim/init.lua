@@ -15,4 +15,4 @@ require("plugins.lsp_zero_config")
 require("plugins.lint")
 require("plugins.nullls")
 require("plugins.format")
-
+require("plugins.fidget_config")

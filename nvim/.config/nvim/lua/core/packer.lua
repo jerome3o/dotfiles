@@ -65,6 +65,9 @@ return require('packer').startup(function(use)
     "neovim/nvim-lspconfig",
   }
 
+  -- visual updates for lsp
+  use 'j-hui/fidget.nvim'
+
   -- lsp configuration, snippets, autocompletion
   use {
     'VonHeikemen/lsp-zero.nvim',
