@@ -55,6 +55,9 @@ return require('packer').startup(function(use)
     end
   }
 
+  -- git blame
+  use 'APZelos/blamer.nvim'
+
   -- multi cursor!
   use "mg979/vim-visual-multi"
 
