@@ -14,13 +14,20 @@
 		],
 		"description": "If main block"
 	},
+	"pdb": {
+		"prefix": ".pdb",
+		"body": [
+      "import pdb; pdb.set_trace()",
+		],
+		"description": "use pdb debugger"
+	},
 	"__init__": {
 		"prefix": ".init",
 		"body": [
       "def __init__(self):",
       "\tpass"
 		],
-		"description": "cheeky debug plot"
+		"description": "init block for a class"
 	},
 	"plt.show()": {
 		"prefix": "shw",
