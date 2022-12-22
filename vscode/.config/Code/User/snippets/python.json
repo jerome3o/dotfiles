@@ -17,7 +17,7 @@
 	"pdb": {
 		"prefix": ".pdb",
 		"body": [
-      "import pdb; pdb.set_trace()",
+      "import pdb; pdb.set_trace()"
 		],
 		"description": "use pdb debugger"
 	},
