@@ -30,6 +30,9 @@ exec --no-startup-id xss-lock -- ~/.config/i3/lock.sh
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# Disable bell, don't think this works as is. WIP to stop firefox bell sound when finding in page
+exec --no-startup-id xset -b
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -222,6 +225,7 @@ client.urgent 		#2f343a #900000 #ffffff #900000
 exec_always --no-startup-id i3bar -b `i3-msg -t get_bar_config | jq -r ". | first"` &
 
 set $Locker sleep 1 && xset dpms force suspend
+
 bindsym ctrl+$mod+l exec --no-startup-id $Locker
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
