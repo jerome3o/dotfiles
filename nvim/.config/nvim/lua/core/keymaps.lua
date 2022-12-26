@@ -47,6 +47,10 @@ vim.keymap.set('v', '<S-left>', "h")
 vim.keymap.set('n', '<S-right>', "vl")
 vim.keymap.set('v', '<S-right>', "l")
 
+-- Copy/paste from clipboard
+
+vim.keymap.set('v', '<leader>y', '"+y')
+vim.keymap.set('n', '<leader>y', '"+y')
 
 -- Paste from yank reg
 vim.keymap.set('n', '<leader>p', '"0p')
@@ -63,4 +67,3 @@ vim.keymap.set('n', '<leader>7', '7gt')
 vim.keymap.set('n', '<leader>8', '8gt')
 vim.keymap.set('n', '<leader>9', '9gt')
 vim.keymap.set('n', '<leader>0', ':tablast<CR>')
-
