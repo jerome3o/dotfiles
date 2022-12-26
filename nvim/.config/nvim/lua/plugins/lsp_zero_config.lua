@@ -258,7 +258,7 @@ end
 
 vim.diagnostic.config({
   virtual_text = {
-    format = format_fn
+    format = virutal_format
   },
   signs = true,
   update_in_insert = false,
