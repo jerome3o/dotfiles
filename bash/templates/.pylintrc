@@ -183,7 +183,9 @@ good-names=i,
            ax,
            x,
            y,
-           Y,
+           X,
+           w,
+           b,
            _
 
 # Good variable names regexes, separated by a comma. If names match any regex,
@@ -422,7 +424,8 @@ disable=raw-checker-failed,
         use-symbolic-message-instead,
         missing-module-docstring,
         too-few-public-methods,
-        missing-function-docstring
+        missing-function-docstring,
+        missing-class-docstring
 
 
 
