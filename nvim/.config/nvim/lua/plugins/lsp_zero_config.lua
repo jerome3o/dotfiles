@@ -252,6 +252,9 @@ cmp.setup(cmp_config)
 local format_fn = function(diagnostic)
   return string.format("%s (%s) %s", diagnostic.message, diagnostic.code, diagnostic.source)
 end
+local virutal_format = function(diagnostic)
+  return diagnostic.code
+end
 
 vim.diagnostic.config({
   virtual_text = {
