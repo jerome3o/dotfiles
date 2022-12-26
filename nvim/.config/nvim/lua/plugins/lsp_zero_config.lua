@@ -54,21 +54,6 @@ local function lsp_settings()
   sign({ name = 'DiagnosticSignHint', text = '⚑' })
   sign({ name = 'DiagnosticSignInfo', text = '' })
 
-  vim.diagnostic.config({
-    virtual_text = false,
-    signs = true,
-    update_in_insert = false,
-    underline = true,
-    severity_sort = true,
-    float = {
-      focusable = false,
-      style = 'minimal',
-      border = 'rounded',
-      source = 'always',
-      header = '',
-      prefix = '',
-    },
-  })
 
   vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
     vim.lsp.handlers.hover,
@@ -263,3 +248,22 @@ local cmp_config = {
 }
 
 cmp.setup(cmp_config)
+
+vim.diagnostic.config({
+  virtual_text = false,
+  signs = true,
+  update_in_insert = false,
+  underline = true,
+  severity_sort = true,
+  float = {
+    focusable = false,
+    style = 'minimal',
+    border = 'rounded',
+    source = 'always',
+    header = '',
+    prefix = '',
+    format = function(diagnostic)
+      return string.format("%s (%s)", diagnostic.message, diagnostic.code)
+    end,
+  },
+})
