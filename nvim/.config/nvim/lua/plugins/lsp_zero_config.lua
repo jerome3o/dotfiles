@@ -212,6 +212,11 @@ local cmp_config = {
       end
     end),
 
+    ['ESC'] = cmp.mapping(function(fallback)
+      cmp.close()
+      fallback()
+    end),
+
     -- go to next placeholder in the snippet
     ['<C-d>'] = cmp.mapping(function(fallback)
       if luasnip.jumpable(1) then
