@@ -9,4 +9,5 @@ vim.g.copilot_filetypes = {
   ['go'] = true,
   ['javascript'] = true,
   ['typescript'] = true,
+  ['rust'] = true,
 }
