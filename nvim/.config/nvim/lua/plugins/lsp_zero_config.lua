@@ -129,13 +129,11 @@ require('luasnip.loaders.from_vscode').lazy_load()
 
 local cmp = require('cmp')
 
-vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
-
-local cmp_select_opts = { behavior = cmp.SelectBehavior.Select }
+vim.opt.completeopt = { 'menu', 'menuone', 'noselect', 'noinsert' }
 
 local cmp_config = {
   completion = {
-    completeopt = 'menu,menuone,noinsert'
+    completeopt = 'menu,menuone,noinsert,noselect',
   },
   snippet = {
     expand = function(args)
@@ -220,30 +218,30 @@ local cmp_config = {
       end
     end, { 'i', 's' }),
 
-    -- when menu is visible, navigate to next item
-    -- when line is empty, insert a tab character
-    -- else, activate completion
-    ['<Tab>'] = cmp.mapping(function(fallback)
-      local col = vim.fn.col('.') - 1
+    -- -- when menu is visible, navigate to next item
+    -- -- when line is empty, insert a tab character
+    -- -- else, activate completion
+    -- ['<Tab>'] = cmp.mapping(function(fallback)
+    --   local col = vim.fn.col('.') - 1
 
-      if cmp.visible() then
-        cmp.select_next_item(cmp_select_opts)
-      elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-        fallback()
-      else
-        cmp.complete()
-      end
-    end, { 'i', 's' }),
+    --   if cmp.visible() then
+    --     cmp.select_next_item(cmp_select_opts)
+    --   elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+    --     fallback()
+    --   else
+    --     cmp.complete()
+    --   end
+    -- end, { 'i', 's' }),
 
-    -- when menu is visible, navigate to previous item on list
-    -- else, revert to default behavior
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item(cmp_select_opts)
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
+    -- -- when menu is visible, navigate to previous item on list
+    -- -- else, revert to default behavior
+    -- ['<S-Tab>'] = cmp.mapping(function(fallback)
+    --   if cmp.visible() then
+    --     cmp.select_prev_item(cmp_select_opts)
+    --   else
+    --     fallback()
+    --   end
+    -- end, { 'i', 's' }),
   }
 }
 
