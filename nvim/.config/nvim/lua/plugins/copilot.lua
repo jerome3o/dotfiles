@@ -7,4 +7,6 @@ vim.g.copilot_filetypes = {
   ['css'] = true,
   ['c'] = true,
   ['go'] = true,
+  ['javascript'] = true,
+  ['typescript'] = true,
 }
