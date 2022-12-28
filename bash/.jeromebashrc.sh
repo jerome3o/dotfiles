@@ -251,6 +251,15 @@ function gr(){
   cd $(git rev-parse --show-toplevel)
 }
 
+# Copies all files from ~/templates/$1 to current directory
+function template(){
+  if [ -z "$1" ]; then
+    echo "Template name required"
+    return
+  fi
+  cp -r ~/templates/$1/* .
+}
+
 ## Tmux Entry
 
 # if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ] && [ -z ${TERM_PROGRAM+x} ]; then
