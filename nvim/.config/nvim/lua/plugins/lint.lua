@@ -1,5 +1,6 @@
 require('lint').linters_by_ft = {
-  python = { 'pylint', }
+  python = { 'pylint', },
+  markdown = { 'vale', }
 }
 
 local severities = {
@@ -43,6 +44,6 @@ require('lint.linters.pylint').parser = parser
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
   callback = function()
-    require("lint").try_lint()
+    require("lint").try_lint(nil, { ignore_errors = true })
   end,
 })
