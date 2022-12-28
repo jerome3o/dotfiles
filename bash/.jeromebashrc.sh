@@ -246,6 +246,11 @@ function getcommitprefix(){
 	fi
 }
 
+# changes directory to the root of the git repo
+function groot(){
+  cd $(git rev-parse --show-toplevel)
+}
+
 ## Tmux Entry
 
 # if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ] && [ -z ${TERM_PROGRAM+x} ]; then
