@@ -247,7 +247,7 @@ function getcommitprefix(){
 }
 
 # changes directory to the root of the git repo
-function groot(){
+function gr(){
   cd $(git rev-parse --show-toplevel)
 }
 
