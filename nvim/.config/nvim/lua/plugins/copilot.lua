@@ -10,4 +10,5 @@ vim.g.copilot_filetypes = {
   ['javascript'] = true,
   ['typescript'] = true,
   ['rust'] = true,
+  ['sh'] = true,
 }
