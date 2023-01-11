@@ -92,6 +92,7 @@ __git_complete g __git_main
 
 ## Alias'
 
+alias fzg="g co $(g branch | fzf)"
 alias s="cd ~/source"
 alias fcd='cd $(find . -type d -print | fzf)'
 alias kc="kubectx"
