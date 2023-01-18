@@ -13,6 +13,7 @@
 [pull]
 	rebase = true
 [alias]
+  poush = push
 	co = checkout
 	cob = checkout -b
   cof = !git checkout $(git branch | fzf)
