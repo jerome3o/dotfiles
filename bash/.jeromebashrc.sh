@@ -96,6 +96,7 @@ alias fzg='g co $(g branch | fzf)'
 alias s="cd ~/source"
 alias fcd='cd $(find . -type d -print | fzf)'
 alias kc="kubectx"
+alias kns="kubens"
 alias pbcopy='xclip -selection c'             # OSX script compatibility
 alias pbpaste='xclip -selection clipboard -o' # OSX script compatibility
 alias xc="xcape -e 'Shift_L=parenleft;Shift_R=parenright'"
