@@ -29,8 +29,8 @@ vim.keymap.set('v', '<leader>"', 'c""<ESC>P')
 vim.keymap.set('v', "<leader>'", "c''<ESC>P")
 
 --- some handy nav shortcuts for tabs/windows
-vim.keymap.set('n', '<leader>l', ":tabn<CR>")
-vim.keymap.set('n', '<leader>h', ":tabp<CR>")
+vim.keymap.set('n', '<leader>l', "<C-w>l")
+vim.keymap.set('n', '<leader>h', "<C-w>h")
 vim.keymap.set('n', '<leader>j', "<C-w>j")
 vim.keymap.set('n', '<leader>k', "<C-w>k")
 
