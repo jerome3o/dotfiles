@@ -28,9 +28,16 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
 
-  -- fzf selection
-  use "junegunn/fzf.vim"
-  use "junegunn/fzf"
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    requires = { { 'nvim-lua/plenary.nvim' } }
+  }
+
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+  -- -- fzf selection
+  -- use "junegunn/fzf.vim"
+  -- use "junegunn/fzf"
 
   -- packer
   use 'wbthomason/packer.nvim'
