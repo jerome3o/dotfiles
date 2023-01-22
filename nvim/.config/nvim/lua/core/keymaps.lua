@@ -47,9 +47,6 @@ vim.keymap.set('v', '<S-left>', "h")
 vim.keymap.set('n', '<S-right>', "vl")
 vim.keymap.set('v', '<S-right>', "l")
 
---- Search
-
-vim.keymap.set('n', '<C-f>', ':Rg<CR>')
 
 -- Copy/paste from clipboard
 
