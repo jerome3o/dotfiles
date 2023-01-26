@@ -121,6 +121,9 @@ return require('packer').startup(function(use)
       "mfussenegger/nvim-dap"
     }
   }
+
+  use "charliermarsh/ruff-lsp"
+
   -- python indentation, not sure if this works
   use 'Vimjas/vim-python-pep8-indent'
 

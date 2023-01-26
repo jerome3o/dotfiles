@@ -71,3 +71,8 @@ require("lspconfig").sumneko_lua.setup({
     checkThirdParty = false,
   }
 })
+
+-- Add ruff
+require('lspconfig').ruff_lsp.setup {
+  on_attach = on_attach,
+}
