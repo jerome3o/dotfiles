@@ -93,6 +93,8 @@ __git_complete g __git_main
 ## Alias'
 
 alias fzg='g co $(g branch | fzf)'
+alias hpon='bluetoothctl connect 2C:BE:EB:11:36:8D'
+alias hpoff='bluetoothctl disconnect 2C:BE:EB:11:36:8D'
 alias s="cd ~/source"
 alias fcd='cd $(find . -type d -print | fzf)'
 alias kc="kubectx"
@@ -103,7 +105,6 @@ alias xc="xcape -e 'Shift_L=parenleft;Shift_R=parenright'"
 alias dka="docker ps -q | xargs docker kill"
 alias ll="ls -lah"
 alias t="tmux"
-alias i="sudo apt install"
 alias nv="nvim"
 alias g="git"
 alias Q='setxkbmap'
