@@ -7,6 +7,9 @@
 #   - implement script logic in main function
 #   - update the cleanup function if needed
 
+
+########### Helpers (no work required)
+
 # Safe guards
 set -Eeuo pipefail
 
@@ -41,6 +44,9 @@ die() {
 # Variables
 script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
 
+
+
+########### Business Logic
 
 # Parse parameters and usage function
 
@@ -89,7 +95,6 @@ parse_params() {
 
   return 0
 }
-
 
 parse_params "$@"
 setup_colors
