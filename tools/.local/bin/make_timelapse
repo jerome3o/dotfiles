@@ -1,0 +1,110 @@
+#!/usr/bin/env bash
+
+## Bash script template
+# how to use:
+#   - configure parameters in parse_params
+#   - update the usage function to represent the parse_params
+#   - implement script logic in main function
+#   - update the cleanup function if needed
+
+
+########### Helpers (no work required)
+
+# Safe guards
+set -Eeuo pipefail
+
+# cleanup
+trap cleanup SIGINT SIGTERM ERR EXIT
+
+cleanup() {
+  trap - SIGINT SIGTERM ERR EXIT
+  # cleanup script here
+}
+
+msg() {
+  echo >&2 -e "${1-}"
+}
+
+die() {
+  local msg=$1
+  local code=${2-1} # default exit status 1
+  msg "$msg"
+  exit "$code"
+}
+
+# Variables
+script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd -P)
+
+########### Business Logic
+
+# Parse parameters and usage function
+
+usage() {
+  cat <<EOF
+Usage: $(basename "${BASH_SOURCE[0]}") [-h] [-v] -t jpg -d images/ -r 30 output.mp4 
+
+Convert a directory of images into a timelapse with a given frame-rate
+
+Available options:
+
+-h, --help        Print this help and exit
+-v, --verbose     Print script debug info
+-r, --frame-rate  Set the frame-rate
+-d, --dir         Directory containing images (defaults to current dir)
+-t, --file-type   Image file type (defaults to jpg)
+EOF
+  exit
+}
+
+parse_params() {
+  # default values of variables set from params
+  frame_rate=30
+  image_dir="./"
+  file_type="jpg"
+
+  while :; do
+    case "${1-}" in
+    -h | --help) usage ;;
+    -v | --verbose) set -x ;;
+    -r | --frame-rate) # example named 
+      frame_rate="${2-}"
+      shift
+      ;;
+    -d | --dir) 
+      image_dir="${2-}"
+      shift
+      ;;
+    -f | --file-type) 
+      file_type="${2-}"
+      shift
+      ;;
+    -?*) die "Unknown option: $1" ;;
+    *) break ;;
+    esac
+    shift
+  done
+
+  out_file=("$@")
+
+  # check required params and arguments
+  [[ ${#out_file[@]} -eq 0 ]] && die "Missing script arguments"
+
+  return 0
+}
+
+parse_params "$@"
+
+function main() {
+  ffmpeg \
+    -y \
+    -r "${frame_rate}" \
+    -f image2 \
+    -pattern_type glob \
+    -i "${image_dir}*.${file_type}" \
+    -vcodec libx264 \
+    -crf 25 \
+    -pix_fmt yuv420p \
+    ${out_file}
+}
+
+main
