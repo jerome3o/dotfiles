@@ -7,9 +7,6 @@ vim.g.maplocalleader = ' '
 -- clear highlight
 vim.keymap.set('n', '<leader>/', ':nohlsearch<CR>')
 
--- close tab
-vim.keymap.set('n', '<leader>w', ':wq<CR>')
-
 -- General editor stuff
 --- saving
 vim.keymap.set('n', '<C-s>', ":w<CR>")
