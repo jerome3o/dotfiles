@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Check if the number of arguments is correct
+if [ $# -ne 1 ]; then
+  echo "Usage: pipe-to-log [log_directory]"
+  exit 1
+fi
+
+# Check if the log directory exists, create it if it doesn't
+if [ ! -d "$1" ]; then
+  mkdir -p "$1"
+fi
+
+# Check if the log directory is writable
+if [ ! -w "$1" ]; then
+  echo "Error: log directory is not writable"
+  exit 1
+fi
+
+# Get the current date and time in a format suitable for log file names
+timestamp=$(date +%Y-%m-%d_%H-%M-%S)
+
+# Generate a unique log file name based on the timestamp
+log_file_name="$1/$timestamp.log"
+
+# Check if the log file already exists
+if [ -e "$log_file_name" ]; then
+  # If it exists, add a suffix to the log file name to make it unique
+  i=1
+  while [ -e "$log_file_name-$i" ]; do
+    i=$((i + 1))
+  done
+  log_file_name="$log_file_name-$i"
+fi
+
+# Redirect the standard input to the log file
+cat - > "$log_file_name"
+
+echo "Output saved to $log_file_name"
+
