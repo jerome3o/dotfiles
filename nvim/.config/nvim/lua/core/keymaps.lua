@@ -2,6 +2,18 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+
+-- terminal mode
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+vim.keymap.set('t', '<C-h>', '<C-\\><C-n><C-w>h')
+vim.keymap.set('t', '<C-j>', '<C-\\><C-n><C-w>j')
+vim.keymap.set('t', '<C-k>', '<C-\\><C-n><C-w>k')
+vim.keymap.set('t', '<C-l>', '<C-\\><C-n><C-w>l')
+
+-- open terminal in current dir
+vim.keymap.set('n', '<leader>t', ':terminal<CR>')
+
+
 -- misc keymaps
 
 -- clear highlight
