@@ -15,6 +15,8 @@ require("nvim-tree").setup({
     mappings = {
       list = {
         { key = "-", action = "close" },
+        { key = "<leader>-", action = "close" },
+        { key = "<leader>c", action = "collapse_all" },
       },
     },
   },
@@ -33,3 +35,4 @@ require("nvim-tree").setup({
 -- keymaps
 
 vim.keymap.set('n', '-', ':NvimTreeToggle<CR>')
+vim.keymap.set('n', '<leader>-', ':NvimTreeFindFile<CR>')
