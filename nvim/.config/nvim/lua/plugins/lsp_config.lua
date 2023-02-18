@@ -1,7 +1,7 @@
 require("mason").setup()
 require("lspconfig")
 require("mason-lspconfig").setup({
-  ensure_installed = { "jedi_language_server", "sumneko_lua" },
+  ensure_installed = { "jedi_language_server", "lua_ls" },
 })
 
 -- Mappings.
@@ -57,7 +57,7 @@ require("lspconfig").jedi_language_server.setup({
   on_attach = on_attach,
   flags = lsp_flags,
 })
-require("lspconfig").sumneko_lua.setup({
+require("lspconfig").lua_ls.setup({
   on_attach = on_attach,
   flags = lsp_flags,
   settings = {

@@ -6,7 +6,7 @@ if [ -f ~/.jeromebashrc.sh ]; then
 fi
 EOF
 
-sudo apt install -y ranger
+sudo apt install -y ranger ripgrep
 
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 
