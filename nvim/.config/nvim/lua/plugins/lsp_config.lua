@@ -1,7 +1,7 @@
 require("mason").setup()
 require("lspconfig")
 require("mason-lspconfig").setup({
-  ensure_installed = { "jedi_language_server", "lua_ls" },
+  ensure_installed = { "jedi_language_server" },
 })
 
 -- Mappings.
@@ -56,21 +56,6 @@ local lsp_flags = {
 require("lspconfig").jedi_language_server.setup({
   on_attach = on_attach,
   flags = lsp_flags,
-})
-require("lspconfig").lua_ls.setup({
-  on_attach = on_attach,
-  flags = lsp_flags,
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { 'vim' }
-      }
-    }
-  },
-  workspace = {
-    library = vim.api.nvim_get_runtime_file("", true),
-    checkThirdParty = false,
-  }
 })
 
 -- Add ruff
