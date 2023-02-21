@@ -13,12 +13,11 @@ PACKAGES="curl git htop neofetch neovim python3 python3-pip python3-venv ranger 
 case "$DISTRO" in
   Ubuntu)
     sudo apt update
-    sudo apt install -y $PACKAGES
+    sudo apt install -y $PACKAGES fd-find
     ;;
   Arch)
     sudo pacman -Syu
-    sudo pacman -S --noconfirm $PACKAGES 
-    sudo pacman -S --noconfirm fd 
+    sudo pacman -S --noconfirm $PACKAGES fd
     ;;
   *)
     echo "Unknown distro: $DISTRO"
