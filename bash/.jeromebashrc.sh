@@ -92,6 +92,7 @@ __git_complete g __git_main
 
 ## Alias'
 
+alias kshell='kubectl run --rm -i --tty jerome-shell --image=alpine:3.17 --restart=Never'
 alias fzg='g co $(g branch | fzf)'
 alias hpon='bluetoothctl connect 2C:BE:EB:11:36:8D'
 alias hpoff='bluetoothctl disconnect 2C:BE:EB:11:36:8D'
