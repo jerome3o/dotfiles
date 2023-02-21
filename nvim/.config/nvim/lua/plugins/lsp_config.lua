@@ -39,13 +39,13 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', '<cmd>lua require("telescope.builtin").lsp_references{}<CR>')
 
-  if client.server_capabilities.documentFormattingProvider then
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      group = vim.api.nvim_create_augroup("Format", { clear = true }),
-      buffer = bufnr,
-      callback = function() vim.lsp.buf.format() end
-    })
-  end
+  -- if client.server_capabilities.documentFormattingProvider then
+  --   vim.api.nvim_create_autocmd("BufWritePre", {
+  --     group = vim.api.nvim_create_augroup("Format", { clear = true }),
+  --     buffer = bufnr,
+  --     callback = function() vim.lsp.buf.format() end
+  --   })
+  -- end
 end
 
 local lsp_flags = {
@@ -59,6 +59,6 @@ require("lspconfig").jedi_language_server.setup({
 })
 
 -- Add ruff
--- require('lspconfig').ruff_lsp.setup {
---   on_attach = on_attach,
--- }
+require('lspconfig').ruff_lsp.setup {
+  on_attach = on_attach,
+}
