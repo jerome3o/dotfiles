@@ -12,4 +12,5 @@ vim.g.copilot_filetypes = {
   ['java'] = true,
   ['rust'] = true,
   ['sh'] = true,
+  ['yaml'] = true,
 }
