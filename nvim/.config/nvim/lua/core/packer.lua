@@ -21,8 +21,9 @@ vim.cmd([[
 
 return require('packer').startup(function(use)
 
-  -- colour scheme
+  -- colour schemes
   use 'tanvirtin/monokai.nvim'
+  use 'arcticicestudio/nord-vim'
 
   -- file tree selection
   use 'nvim-tree/nvim-tree.lua'
