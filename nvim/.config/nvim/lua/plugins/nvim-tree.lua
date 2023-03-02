@@ -34,5 +34,4 @@ require("nvim-tree").setup({
 
 -- keymaps
 
-vim.keymap.set('n', '-', ':NvimTreeToggle<CR>')
-vim.keymap.set('n', '<leader>-', ':NvimTreeFindFile<CR>')
+vim.keymap.set('n', '-', ':NvimTreeFindFileToggle<CR>')
