@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
   -- colour schemes
   use 'tanvirtin/monokai.nvim'
   use 'arcticicestudio/nord-vim'
+  use 'dracula/vim'
 
   -- file tree selection
   use 'nvim-tree/nvim-tree.lua'
