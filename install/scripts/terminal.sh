@@ -18,6 +18,7 @@ case "$DISTRO" in
   Arch)
     sudo pacman -Syu
     sudo pacman -S --noconfirm $PACKAGES 
+    sudo pacman -S --noconfirm fd 
     ;;
   *)
     echo "Unknown distro: $DISTRO"
