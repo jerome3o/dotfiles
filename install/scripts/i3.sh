@@ -1,1 +1,1 @@
-sudo pacman -S xss-lock
+sudo pacman -S xss-lock flameshot
