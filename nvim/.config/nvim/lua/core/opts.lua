@@ -15,4 +15,4 @@ vim.opt.expandtab = true
 vim.opt.listchars = 'tab:▸ ,eol:¬,space:.'
 
 vim.opt.number = true
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
