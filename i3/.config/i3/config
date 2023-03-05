@@ -24,7 +24,8 @@
 
 # natural scrolling
 # exec --no-startup-id xinput set-prop 13 300 1
-exec xinput set-prop 13 300 1
+exec --no-startup-id xinput set-prop 13 300 1
+exec --no-startup-id xinput set-prop 12 300 1
 
 # change focus
 bindsym $mod+h focus left
@@ -53,26 +54,8 @@ exec --no-startup-id xss-lock -- ~/.config/i3/lock.sh
 set $Locker sleep 1 && xset dpms force suspend
 bindsym ctrl+$mod+l exec --no-startup-id $Locker
 
-# System mode
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
-mode "$mode_system" {
-    bindsym l exec --no-startup-id $Locker, mode "default"
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff, mode "default"
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-bindsym $mod+Pause mode "$mode_system"
 # Useful in Macbook laptops:
 bindsym $mod+XF86Eject exec i3-msg exit
-# Useful in laptops without pause:
-bindsym $mod+Escape mode "$mode_system"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -267,6 +250,7 @@ bindsym $mod+q kill
 
 # exit-menu
 bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
+bindsym $mod+Escape exec ~/.config/i3/scripts/powermenu
 
 # Lock the system
 # lock with a picture:
