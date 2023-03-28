@@ -16,3 +16,10 @@ vim.opt.listchars = 'tab:▸ ,eol:¬,space:.'
 
 vim.opt.number = true
 -- vim.opt.relativenumber = true
+
+-- Enable ruler
+vim.opt.ruler = true
+
+-- Set color column at column 100
+vim.opt.colorcolumn = "100"
+
