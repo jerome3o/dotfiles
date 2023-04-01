@@ -14,7 +14,9 @@
   "go.toolsManagement.autoUpdate": true,
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "explorer.confirmDelete": false,
-  "editor.rulers": [100],
+  "editor.rulers": [
+    100
+  ],
   "editor.formatOnSave": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editorAssociations": {
@@ -23,7 +25,10 @@
   "editor.minimap.enabled": false,
   "explorer.confirmDragAndDrop": false,
   "jupyter.askForKernelRestart": false,
-  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+  "jupyter.widgetScriptSources": [
+    "jsdelivr.com",
+    "unpkg.com"
+  ],
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -32,5 +37,10 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-  }
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "editor.inlineSuggest.enabled": true,
+  "window.zoomLevel": 1
 }
