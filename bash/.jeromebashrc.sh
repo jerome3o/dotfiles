@@ -93,6 +93,7 @@ __git_complete g __git_main
 ## Alias'
 
 alias n="nvim ~/.notes.md"
+alias gc="g c"
 alias kshell='kubectl run --rm -i --tty jerome-shell --image=alpine:3.17 --restart=Never'
 alias fzg='g co $(g branch | fzf)'
 alias hpon='bluetoothctl connect 2C:BE:EB:11:36:8D'
@@ -182,16 +183,6 @@ function gad(){
 # git ammend
 function gam(){
 	git commit --amend --no-edit;
-}
-
-# git commit
-function gc(){
-	if [ -z "$1" ]; then
-		echo Commit message required
-		return
-	fi
-	msg="$*"
-	git commit -m "$(getcommitprefix)$msg";
 }
 
 # git push force
