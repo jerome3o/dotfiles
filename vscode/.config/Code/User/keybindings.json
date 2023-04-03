@@ -1,6 +1,53 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
+        "key": "-",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.toggleSidebarVisibility",
+                "workbench.explorer.fileView.focus",
+            ],
+        },
+        "when": "editorTextFocus && vim.active && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+b k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+b ctrl+k",
+        "command": "workbench.action.terminal.resizePaneUp",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+b ctrl+j",
+        "command": "workbench.action.terminal.resizePaneDown",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+b ctrl+j",
+        "command": "workbench.action.terminal.resizePaneDown",
+    },
+    {
+        "key": "ctrl+b ctrl+k",
+        "command": "workbench.action.terminal.resizePaneUp",
+    },
+    {
+        "key": "ctrl+b l",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "ctrl+b h",
+        "command": "workbench.explorer.fileView.focus"
+    },
+    {
+        "key": "ctrl+b j",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
         "key": "alt+left",
         "command": "workbench.action.navigateBack"
     },
@@ -55,5 +102,13 @@
         "key": "alt+up",
         "command": "-block-travel.jumpUp",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
     }
 ]

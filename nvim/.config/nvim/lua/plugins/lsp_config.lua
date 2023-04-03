@@ -62,3 +62,8 @@ require("lspconfig").jedi_language_server.setup({
 require('lspconfig').ruff_lsp.setup {
   on_attach = on_attach,
 }
+
+-- Add TypeScript
+require('lspconfig').tsserver.setup {
+  on_attach = on_attach,
+}
