@@ -1,23 +1,23 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-    {
-        "key": "-",
-        // TODO: Use this when updated to 1.77
-        // "command": "runCommands",
-        // "args": {
-        //     "commands": [
-        //         "workbench.action.toggleSidebarVisibility",
-        //         "workbench.explorer.fileView.focus",
-        //     ],
-        // },
-        "command": "workbench.action.toggleSidebarVisibility",
-        "when": "editorTextFocus && vim.active && !inDebugRepl"
-    },
-    {
-        "key": "-",
-        "command": "workbench.action.toggleSidebarVisibility",
-        "when": "sideBarFocus"
-    },
+    // {
+    //     "key": "-",
+    //     // TODO: Use this when updated to 1.77
+    //     // "command": "runCommands",
+    //     // "args": {
+    //     //     "commands": [
+    //     //         "workbench.action.toggleSidebarVisibility",
+    //     //         "workbench.explorer.fileView.focus",
+    //     //     ],
+    //     // },
+    //     "command": "workbench.action.toggleSidebarVisibility",
+    //     "when": "editorTextFocus && vim.active && !inDebugRepl"
+    // },
+    // {
+    //     "key": "-",
+    //     "command": "workbench.action.toggleSidebarVisibility",
+    //     "when": "sideBarFocus"
+    // },
     {
         "key": "ctrl+b k",
         "command": "workbench.action.focusActiveEditorGroup",
