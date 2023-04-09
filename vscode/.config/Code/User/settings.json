@@ -49,5 +49,7 @@
     "markdown": false,
     "scminput": false
   },
-  "window.titleBarStyle": "custom"
+  "window.titleBarStyle": "custom",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorTheme": "Default Dark+ Experimental"
 }
