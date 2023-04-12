@@ -43,13 +43,22 @@
   },
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
+
     "*": true,
     "yaml": false,
     "plaintext": false,
-    "markdown": false,
-    "scminput": false
+    "markdown": true,
+    "scminput": false,
+    ".env": false,
+    "properties": false
   },
   "window.titleBarStyle": "custom",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.colorTheme": "Default Dark+ Experimental"
+  "workbench.colorTheme": "Default Dark+ Experimental",
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tabSize": 2,
+  "vim.normalModeKeyBindings": [
+  ]
 }
