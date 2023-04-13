@@ -92,6 +92,7 @@ __git_complete g __git_main
 
 ## Alias'
 
+alias h="compgen -acbk -A function | sort | uniq | fzf"
 alias n="nvim ~/.notes.md"
 alias gc="g c"
 alias kshell='kubectl run --rm -i --tty jerome-shell --image=alpine:3.17 --restart=Never'
