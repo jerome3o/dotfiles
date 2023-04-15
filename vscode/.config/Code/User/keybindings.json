@@ -170,5 +170,9 @@
         "key": "ctrl+a",
         "command": "-extension.vim_ctrl+a",
         "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+b a",
+        "command": "cSpell.addWordToWorkspaceDictionary"
     }
 ]

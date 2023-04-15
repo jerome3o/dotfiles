@@ -1,7 +1,6 @@
 {
   "security.workspace.trust.untrustedFiles": "open",
   "cSpell.enabledLanguageIds": [
-    "asciidoc",
     "git-commit",
     "jupyter",
     "latex",
@@ -14,10 +13,7 @@
   "go.toolsManagement.autoUpdate": true,
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "explorer.confirmDelete": false,
-  "editor.rulers": [
-    100
-  ],
-  "editor.formatOnSave": true,
+  "editor.rulers": [100],
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editorAssociations": {
     "*.wasm": "hexEditor.hexedit"
@@ -25,11 +21,7 @@
   "editor.minimap.enabled": false,
   "explorer.confirmDragAndDrop": false,
   "jupyter.askForKernelRestart": false,
-  "jupyter.widgetScriptSources": [
-    "jsdelivr.com",
-    "unpkg.com"
-  ],
-  "files.trimTrailingWhitespace": true,
+  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "[javascript]": {
@@ -43,11 +35,10 @@
   },
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
-
     "*": true,
-    "yaml": false,
+    "yaml": true,
     "plaintext": false,
-    "markdown": true,
+    "markdown": false,
     "scminput": false,
     ".env": false,
     "properties": false
@@ -58,7 +49,12 @@
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.tabSize": 2,
-  "vim.normalModeKeyBindings": [
-  ]
+  "vim.normalModeKeyBindings": [],
+  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true,
+  "cSpell.enableFiletypes": [
+    "!*",
+    "markdown"
+  ],
+  "vim.easymotion": true
 }
