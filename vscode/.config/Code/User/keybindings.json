@@ -161,11 +161,11 @@
         "command": "-extension.vim_ctrl+s",
         "when": "editorTextFocus && vim.active && vim.use<C-s> && !inDebugRepl"
     },
-    {
-        "key": "a",
-        "command": "explorer.newFile",
-        "when": "sideBarFocus & !textInputFocus"
-    },
+    // {
+    //     "key": "a",
+    //     "command": "explorer.newFile",
+    //     "when": "sideBarFocus & !textInputFocus"
+    // },
     {
         "key": "ctrl+a",
         "command": "-extension.vim_ctrl+a",
