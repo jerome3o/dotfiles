@@ -13,7 +13,9 @@
   "go.toolsManagement.autoUpdate": true,
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "explorer.confirmDelete": false,
-  "editor.rulers": [100],
+  "editor.rulers": [
+    100
+  ],
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editorAssociations": {
     "*.wasm": "hexEditor.hexedit"
@@ -21,7 +23,10 @@
   "editor.minimap.enabled": false,
   "explorer.confirmDragAndDrop": false,
   "jupyter.askForKernelRestart": false,
-  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+  "jupyter.widgetScriptSources": [
+    "jsdelivr.com",
+    "unpkg.com"
+  ],
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "[javascript]": {
@@ -36,10 +41,10 @@
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
     "*": true,
-    "yaml": true,
     "plaintext": false,
-    "markdown": false,
+    "markdown": true,
     "scminput": false,
+    "yaml": true,
     ".env": false,
     "properties": false
   },
@@ -56,5 +61,12 @@
     "!*",
     "markdown"
   ],
-  "vim.easymotion": true
+  "vim.easymotion": true,
+  "git.openRepositoryInParentFolders": "never",
+  "java.debug.settings.vmArgs": "-ea",
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "python.formatting.provider": "black",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
