@@ -26,6 +26,9 @@ export PATH="$HOME/gems/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:~/go/bin
 
+# ROCm
+export PATH=$PATH:/opt/rocm/bin
+
 # .local/bin
 export PATH="$PATH:$HOME/.local/bin"
 
