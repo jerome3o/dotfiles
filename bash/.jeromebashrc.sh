@@ -265,3 +265,10 @@ function template(){
 # if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ] && [ -z ${TERM_PROGRAM+x} ]; then
 #     tmux >/dev/null 2>&1
 # fi
+
+
+# https://docs.dagster.io/deployment/guides/kubernetes/customizing-your-deployment#kubernetes-job-and-pod-ttl-management
+dagsterclean() {
+	kubectl get job | grep -e dagster-run -e dagster-step | awk 'match($4,/[0-9]+d/) {print $1}' | xargs kubectl delete job
+	kubectl get pod | grep -e dagster-run -e dagster-step | awk 'match($3,/Completed/) {print $0}' | awk 'match($5,/[0-9]+d/) {print $1}' | xargs kubectl delete pod
+}
