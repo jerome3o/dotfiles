@@ -55,7 +55,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "vim.normalModeKeyBindings": [],
-  "editor.formatOnSave": true,
   "files.trimTrailingWhitespace": true,
   "cSpell.enableFiletypes": [
     "!*",
@@ -69,5 +68,12 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.defaultFormatter": "ms-python.black-formatter"
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "editor.formatOnSave": true,
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
