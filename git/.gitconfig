@@ -16,6 +16,7 @@
   poush = push
   pus = push
   puosh = push
+  psh = push
 	co = checkout
 	cob = checkout -b
   cof = !git checkout $(git branch | fzf)
