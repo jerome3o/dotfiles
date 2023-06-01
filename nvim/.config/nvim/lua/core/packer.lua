@@ -10,6 +10,7 @@ local ensure_packer = function()
   return false
 end
 
+
 local packer_bootstrap = ensure_packer()
 
 vim.cmd([[
@@ -56,13 +57,13 @@ return require('packer').startup(function(use)
   -- syntax highlighting
   use 'nvim-treesitter/nvim-treesitter'
 
-  -- preview git changes in the sidebar TODO: fix
-  use {
-    'lewis6991/gitsigns.nvim',
-    config = function()
-      require('gitsigns').setup()
-    end
-  }
+  -- -- preview git changes in the sidebar TODO: fix
+  -- use {
+  --   'lewis6991/gitsigns.nvim',
+  --   config = function()
+  --     require('gitsigns').setup()
+  --   end
+  -- }
 
   -- git blame
   use 'APZelos/blamer.nvim'

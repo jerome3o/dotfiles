@@ -7,5 +7,9 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
 # get version 0.8.3
 wget https://github.com/neovim/neovim/releases/download/v0.8.3/nvim.appimage
 chmod +x nvim.appimage
-sudo mv nvim.appimage /usr/bin/nvim
+
+./nvim.appimage --appimage-extract
+sudo ln -s $(pwd)/squashfs-root/usr/bin/nvim /usr/bin/
+
+sudo rm nvim.appimage
 
