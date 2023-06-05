@@ -84,6 +84,9 @@ shopt -s no_empty_cmd_completion
 
 if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     GIT_PROMPT_ONLY_IN_REPO=1
+    function prompt_callback {
+      echo -n " [${HOSTNAME}]"
+    }
     source $HOME/.bash-git-prompt/gitprompt.sh
 fi
 
