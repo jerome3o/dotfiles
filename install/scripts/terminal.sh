@@ -29,4 +29,4 @@ git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt -
 . ~/scripts/nvim.sh
 . ~/scripts/tmux.sh
 . ~/scripts/fonts.sh
-
+. ~/scripts/fzf.sh
