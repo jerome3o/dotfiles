@@ -13,4 +13,5 @@ vim.g.copilot_filetypes = {
   ['rust'] = true,
   ['sh'] = true,
   ['yaml'] = true,
+  ['gitcommit'] = true,
 }
