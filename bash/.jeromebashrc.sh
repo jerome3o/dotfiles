@@ -275,3 +275,11 @@ dagsterclean() {
 	kubectl get job | grep -e dagster-run -e dagster-step | awk 'match($4,/[0-9]+d/) {print $1}' | xargs kubectl delete job
 	kubectl get pod | grep -e dagster-run -e dagster-step | awk 'match($3,/Completed/) {print $0}' | awk 'match($5,/[0-9]+d/) {print $1}' | xargs kubectl delete pod
 }
+
+# pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+
+if command -v pyenv &>/dev/null; then
+    eval "$(pyenv init --path)"
+    eval "$(pyenv virtualenv-init -)"
+fi
