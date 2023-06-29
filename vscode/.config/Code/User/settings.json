@@ -1,7 +1,7 @@
 {
   "security.workspace.trust.untrustedFiles": "open",
   "cSpell.enabledLanguageIds": [
-    "git-commit",
+    "gitcommit",
     "jupyter",
     "latex",
     "markdown",
@@ -36,7 +36,8 @@
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "[python]": {
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.python"
   },
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
@@ -50,7 +51,6 @@
   },
   "window.titleBarStyle": "custom",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.colorTheme": "Default Dark+ Experimental",
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -66,7 +66,7 @@
   "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
   "python.formatting.provider": "black",
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "editor.defaultFormatter": "ms-python.black-formatter",
   "editor.formatOnSave": true,
@@ -75,5 +75,6 @@
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "workbench.colorTheme": "Monokai"
 }
