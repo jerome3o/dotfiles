@@ -121,7 +121,7 @@ alias Q='setxkbmap'
 alias hk='cd && ./.hotkeys_on.sh && cd -'
 alias gs='git status'
 alias hk='~/.hotkeys_on.sh'
-alias lenv='export $(cat .env | grep -v "^#" | xargs)'
+# alias lenv='export $(cat .env | grep -v "^#" | xargs)'
 alias serve="browser-sync start -s -f . --no-notify --host 0.0.0.0 --port 9000"
 alias rs="rsync -rah --progress"
 alias vvv="python3 -m venv venv"
@@ -129,6 +129,16 @@ alias vvv="python3 -m venv venv"
 ## Functions
 
 # alias vv=". venv/bin/activate"
+
+lenv() {
+  filename=${1:-.env}
+  if [ -f $filename ]; then
+    export $(cat $filename | grep -v "^#" | xargs)
+    echo "Environment variables exported from $filename"
+  else
+    echo "File not found: $filename"
+  fi
+}
 
 function vv() {
 	if [ -f ./venv/bin/activate ]; then
