@@ -37,7 +37,7 @@
   },
   "[python]": {
     "editor.formatOnType": true,
-    "editor.defaultFormatter": "ms-python.python"
+    "editor.defaultFormatter": "ms-python.black-formatter"
   },
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
@@ -76,5 +76,6 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Monokai"
+  "workbench.colorTheme": "Monokai",
+  "window.title": "${dirty}${rootName}"
 }

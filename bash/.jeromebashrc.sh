@@ -101,7 +101,7 @@ __git_complete g __git_main
 alias h="cat <(compgen -acbk -A function) <(apropos -s 1 '') | sort | uniq | fzf"
 alias n="nvim ~/.notes.md"
 alias gc="g c"
-alias kshell='kubectl run --rm -i --tty jerome-shell --image=alpine:3.17 --restart=Never'
+alias kshell='kubectl run --rm -i --tty jerome-shell --image=ubuntu --restart=Never'
 alias fzg='g co $(g branch | fzf)'
 alias hpon='bluetoothctl connect 2C:BE:EB:11:36:8D'
 alias hpoff='bluetoothctl disconnect 2C:BE:EB:11:36:8D'
