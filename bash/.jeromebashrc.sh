@@ -294,3 +294,11 @@ if command -v pyenv &>/dev/null; then
     eval "$(pyenv init --path)"
     eval "$(pyenv virtualenv-init -)"
 fi
+
+
+if command -v kubectl &>/dev/null; then
+    source <(kubectl completion bash)
+    
+    # for alias k
+    complete -o default -F __start_kubectl k
+fi
