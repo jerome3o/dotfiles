@@ -34,16 +34,16 @@ snap install spotify
 # steam
 sudo apt-get install -y steam
 
-# brave browser
-sudo apt install -y apt-transport-https curl
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt install -y brave-browser
+# # brave browser
+# sudo apt install -y apt-transport-https curl
+# sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+# echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+# sudo apt update
+# sudo apt install -y brave-browser
 
-# nodejs
-sudo apt-get install -y nodejs
-sudo apt install -y npm
+# # nodejs
+# sudo apt-get install -y nodejs
+# sudo apt install -y npm
 
 # App Image Launcher
 sudo add-apt-repository -y ppa:appimagelauncher-team/stable
@@ -55,9 +55,9 @@ sudo apt-get install -y appimagelauncher
 sudo apt update
 sudo apt install -y openssh-server
 
-# install portaudio
-# This is for pyaudio and capturing mic data
-sudo apt-get install -y portaudio19-dev
+# # install portaudio
+# # This is for pyaudio and capturing mic data
+# sudo apt-get install -y portaudio19-dev
 
 # ruby (for jekyll)
 sudo apt-get install -y ruby-full build-essential zlib1g-dev
@@ -68,6 +68,6 @@ export PATH="$HOME/gems/bin:$PATH"
 gem install jekyll bundler
 
 
-# Flatpak
+# # Flatpak
 
-sudo apt install flatpak
+# sudo apt install flatpak
