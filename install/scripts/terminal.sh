@@ -8,7 +8,7 @@ EOF
 
 DISTRO=$(lsb_release -si)
 
-PACKAGES="curl git htop neofetch neovim python3 python3-pip python3-venv ranger ripgrep tmux wget"
+PACKAGES="curl git htop neofetch python3 python3-pip python3-venv ranger ripgrep tmux wget"
 
 case "$DISTRO" in
   Ubuntu)
