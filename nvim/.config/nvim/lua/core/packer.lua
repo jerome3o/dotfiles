@@ -79,7 +79,10 @@ return require('packer').startup(function(use)
   }
 
   -- visual updates for lsp
-  use 'j-hui/fidget.nvim'
+  use {
+    'j-hui/fidget.nvim',
+    tag = 'legacy',
+  }
 
   -- lsp configuration, snippets, autocompletion
   use {
