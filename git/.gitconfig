@@ -47,3 +47,5 @@
 	path = .gitconfig.rl
 [credential]
 	helper = store
+[push]
+	autoSetupRemote = true
