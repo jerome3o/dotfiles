@@ -43,6 +43,8 @@
 	ll = log --oneline --decorate --stat
 	llv = log --pretty=format:'%C(auto)%h %d %s %C(green)(%cr) %C(blue)<%aN>' --stat
 	la = "!git config -l | grep alias | cut -c 7-"
+  ph = push
+  pl = pull
 [includeIf "gitdir:/home/j.swannack/"]
 	path = .gitconfig.rl
 [credential]
