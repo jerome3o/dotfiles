@@ -99,6 +99,7 @@ __git_complete g __git_main
 ## Alias'
 
 alias jclone='curl -s https://api.github.com/users/jerome3o/repos?per_page=100 | jq ".[].name" | sed "s/\"\(.*\)\"/\1/g" | fzf | xargs -I{} git clone git@github.com:/jerome3o/{}'
+alias gitcount='git ls-files | while read f; do git blame --line-porcelain $f | grep "^author "; done | sort -f | uniq -ic | sort -n'
 alias h="cat <(compgen -acbk -A function) <(apropos -s 1 '') | sort | uniq | fzf"
 alias n="nvim ~/.notes.md"
 alias gc="g c"
