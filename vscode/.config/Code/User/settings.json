@@ -77,5 +77,11 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.colorTheme": "Monokai",
-  "window.title": "${dirty}${rootName}"
+  "window.title": "${dirty}${rootName}",
+  "cSpell.userWords": [
+    "jist",
+    "logit",
+    "softmax",
+    "tokenizes"
+  ]
 }
