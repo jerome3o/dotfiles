@@ -83,5 +83,6 @@
     "logit",
     "softmax",
     "tokenizes"
-  ]
+  ],
+  "svelte.enable-ts-plugin": true
 }
