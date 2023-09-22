@@ -10,39 +10,41 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[rebase]
+  autosquash = true
 [pull]
-	rebase = true
+	rebase = false
 [alias]
   poush = push
   pus = push
   puosh = push
   psh = push
-	co = checkout
-	cob = checkout -b
+  co = checkout
+  cob = checkout -b
   cof = !git checkout $(git branch | fzf)
-	b = branch
-	br = branch -r
-	ba = branch -a
-	r = remote
-	rw = remote -v show
-	ra = remote add
-	pro = remote prune origin
-	c = commit -v
-	s = status -s
-	st = status
-	stv = status -v
-	stvv = status -vv
-	last = log --oneline --decorate -1 HEAD
-	unstage = reset HEAD --
-	a = add
-	aa = add -A
-	fl = log -u
-	lg = log --oneline --decorate --all --graph
-	ls = log --oneline --decorate
-	lsv = log --pretty=format:'%C(auto)%h %d %s %C(green)(%cr) %C(blue)<%aN>'
-	ll = log --oneline --decorate --stat
-	llv = log --pretty=format:'%C(auto)%h %d %s %C(green)(%cr) %C(blue)<%aN>' --stat
-	la = "!git config -l | grep alias | cut -c 7-"
+  b = branch
+  br = branch -r
+  ba = branch -a
+  r = remote
+  rw = remote -v show
+  ra = remote add
+  pro = remote prune origin
+  c = commit -v
+  s = status -s
+  st = status
+  stv = status -v
+  stvv = status -vv
+  last = log --oneline --decorate -1 HEAD
+  unstage = reset HEAD --
+  a = add
+  aa = add -A
+  fl = log -u
+  lg = log --oneline --decorate --all --graph
+  ls = log --oneline --decorate
+  lsv = log --pretty=format:'%C(auto)%h %d %s %C(green)(%cr) %C(blue)<%aN>'
+  ll = log --oneline --decorate --stat
+  llv = log --pretty=format:'%C(auto)%h %d %s %C(green)(%cr) %C(blue)<%aN>' --stat
+  la = "!git config -l | grep alias | cut -c 7-"
   ph = push
   pl = pull
 [includeIf "gitdir:/home/j.swannack/"]

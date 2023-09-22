@@ -36,7 +36,7 @@ export PATH="$PATH:$HOME/.local/bin"
 export EDITOR=nvim
 
 # # SSH agent
-if [ -z ${SSH_AUTH_SOCK+x} ]; then 
+if [ -z ${SSH_AUTH_SOCK+x} ]; then
 	export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 fi
 if [ "$SSH_AUTH_SOCK" != ~/.ssh/ssh_auth_sock ]; then
@@ -300,7 +300,7 @@ fi
 
 if command -v kubectl &>/dev/null; then
     source <(kubectl completion bash)
-    
+
     # for alias k
     complete -o default -F __start_kubectl k
 fi

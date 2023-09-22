@@ -43,7 +43,7 @@
   "github.copilot.enable": {
     "*": true,
     "plaintext": false,
-    "markdown": false,
+    "markdown": true,
     "scminput": false,
     "yaml": true,
     ".env": false,
@@ -76,7 +76,7 @@
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Monokai",
+  "workbench.colorTheme": "Default Dark+",
   "window.title": "${dirty}${rootName}",
   "cSpell.userWords": [
     "jist",
@@ -84,5 +84,8 @@
     "softmax",
     "tokenizes"
   ],
-  "svelte.enable-ts-plugin": true
+  "svelte.enable-ts-plugin": true,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }
