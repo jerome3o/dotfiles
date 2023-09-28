@@ -105,7 +105,11 @@ alias n="nvim ~/.notes.md"
 alias gc="g c"
 alias kshell='kubectl run --rm -i --tty jerome-shell --image=ubuntu --restart=Never'
 alias k='kubectl'
+
+# fzf git tools
 alias fzg='g co $(g branch | fzf)'
+alias ffx='git commit --fixup $(git log --pretty=format:"%h %s" | fzf | awk "{print \$1}")'
+
 alias hpon='bluetoothctl connect 2C:BE:EB:11:36:8D'
 alias hpoff='bluetoothctl disconnect 2C:BE:EB:11:36:8D'
 alias s="cd ~/source"
