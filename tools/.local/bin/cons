@@ -1,0 +1,98 @@
+#!/bin/env /bin/python3
+import io
+from subprocess import Popen, PIPE
+import pandas as pd
+
+
+def run_cmd(cmd):
+    p = Popen(cmd, shell=True, stdout=PIPE, stderr=PIPE)
+    stdout, stderr = p.communicate()
+    return stdout.decode("utf-8"), stderr.decode("utf-8"), p.returncode
+
+
+# lsof -i -P
+def get_lsof() -> pd.DataFrame:
+    cmd = "lsof -i -P"
+    stdout, stderr, returncode = run_cmd(cmd)
+    if returncode != 0:
+        raise Exception(f"Error running {cmd}: {stderr}")
+
+    headers = [
+        "COMMAND",
+        "PID",
+        "USER",
+        "FD",
+        "TYPE",
+        "DEVICE",
+        "SIZE/OFF",
+        "NODE",
+        "NAME",
+        "STATUS",
+    ]
+
+    return pd.read_csv(
+        io.StringIO(stdout),
+        sep=r"\s+",
+        skiprows=1,
+        index_col=False,
+        engine="python",
+        names=headers,
+    )
+
+
+def get_pid_info(pid: int) -> dict:
+    cmd = f"ps -p {pid} -o cmd"
+    stdout, stderr, returncode = run_cmd(cmd)
+    if returncode != 0:
+        raise Exception(f"Error running {cmd}: {stderr}")
+
+    return stdout.strip().split("\n")[-1].strip()
+
+
+def get_process_info(df: pd.DataFrame) -> dict:
+    # should only be one value
+    pid = df["PID"].iloc[0]
+    user = df["USER"].iloc[0]
+
+    cmd = get_pid_info(pid)
+
+    info = {}
+
+    df = df.fillna("None")
+    # allow nones
+    for (proto, s), _df in df.groupby(["NODE", "STATUS"]):
+        if s != "None":
+            key = f"{proto}-{s.strip('()')}"
+        else:
+            key = proto
+
+        info[key] = _df["NAME"].tolist()
+
+    header = f"{user}, {pid} - {cmd}"
+
+    return header, info
+
+
+def main():
+    df = get_lsof()
+
+    for r in df.groupby("PID").apply(
+        get_process_info,
+    ):
+        header, info = r
+        if len(header) >= 80:
+            header = header[:80] + "..."
+
+        print(header)
+        for k, v in info.items():
+            print(f"  {k}: {', '.join(v)}")
+
+        print()
+
+
+if __name__ == "__main__":
+    import logging
+    import ipdb
+
+    logging.basicConfig(level=logging.INFO)
+    main()
