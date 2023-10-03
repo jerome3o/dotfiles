@@ -14,6 +14,7 @@
   autosquash = true
 [pull]
 	rebase = false
+  ff = only
 [alias]
   poush = push
   pus = push
