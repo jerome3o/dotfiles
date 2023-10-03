@@ -87,5 +87,8 @@
   "svelte.enable-ts-plugin": true,
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jinja-html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
   }
 }
