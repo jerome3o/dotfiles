@@ -107,7 +107,7 @@ alias kshell='kubectl run --rm -i --tty jerome-shell --image=ubuntu --restart=Ne
 alias k='kubectl'
 
 # fzf git tools
-alias fzg='g co $(g branch | fzf)'
+alias fco='g co $(g branch | fzf)'
 alias ffx='git commit --fixup $(git log --pretty=format:"%h %s" | fzf | awk "{print \$1}")'
 
 alias hpon='bluetoothctl connect 2C:BE:EB:11:36:8D'
@@ -186,8 +186,6 @@ venv (){
 			}
 		]
 	}' > ./.vscode/launch.json
-	code .
-	popd
 }
 
 # git log

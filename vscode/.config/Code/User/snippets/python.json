@@ -58,6 +58,14 @@
 		],
 		"description": "pandas"
 	},
+	"polars": {
+		"prefix": ".pl",
+		"body": [
+			"import polars as pl",
+			"import polars.selectors as cs"
+		],
+		"description": "polars"
+	},
 	"numpy": {
 		"prefix": ".np",
 		"body": [
