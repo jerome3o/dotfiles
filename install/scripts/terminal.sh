@@ -15,6 +15,10 @@ case "$DISTRO" in
     sudo apt update
     sudo apt install -y $PACKAGES fd-find
     ;;
+  Debian)
+    sudo apt update
+    sudo apt install -y $PACKAGES fd-find
+    ;;
   Arch)
     sudo pacman -Syu
     sudo pacman -S --noconfirm $PACKAGES fd
