@@ -74,7 +74,7 @@
     "editor.defaultFormatter": "redhat.java"
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "workbench.colorTheme": "Default Dark+",
   "window.title": "${dirty}${rootName}",
@@ -91,5 +91,13 @@
   "[jinja-html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "window.zoomLevel": -1
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
