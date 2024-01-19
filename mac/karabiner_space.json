@@ -1,0 +1,27 @@
+{
+    "description": "Underscore",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "spacebar",
+                "modifiers": {
+                    "mandatory": [
+                        "shift"
+                    ],
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "hyphen",
+                    "modifiers": [
+                        "shift"
+                    ]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
