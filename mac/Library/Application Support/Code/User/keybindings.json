@@ -20,38 +20,38 @@
     //     "when": "sideBarFocus"
     // },
     {
-        "key": "ctrl+b k",
+        "key": "cmd+b k",
         "command": "workbench.action.focusActiveEditorGroup"
     },
     {
-        "key": "ctrl+b ctrl+k",
+        "key": "cmd+b cmd+k",
         "command": "workbench.action.terminal.resizePaneUp",
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+b ctrl+j",
+        "key": "cmd+b cmd+j",
         "command": "workbench.action.terminal.resizePaneDown",
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+b ctrl+j",
+        "key": "cmd+b cmd+j",
         "command": "workbench.action.terminal.resizePaneDown"
     },
     {
-        "key": "ctrl+b ctrl+k",
+        "key": "cmd+b cmd+k",
         "command": "workbench.action.terminal.resizePaneUp"
     },
     {
-        "key": "ctrl+b l",
+        "key": "cmd+b l",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "sideBarFocus"
     },
     {
-        "key": "ctrl+b h",
+        "key": "cmd+b h",
         "command": "workbench.explorer.fileView.focus"
     },
     {
-        "key": "ctrl+b j",
+        "key": "cmd+b j",
         "command": "workbench.action.terminal.focus"
     },
     {
@@ -67,7 +67,7 @@
         "command": "-workbench.action.navigateBack"
     },
     {
-        "key": "ctrl+.",
+        "key": "ctrl+right",
         "command": "workbench.action.navigateForward"
     },
     {
@@ -75,7 +75,7 @@
         "command": "-workbench.action.navigateForward"
     },
     {
-        "key": "shift+alt+pagedown",
+        "key": "ctrl+shift+pagedown",
         "command": "block-travel.selectDown",
         "when": "editorTextFocus"
     },
@@ -85,7 +85,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+alt+pageup",
+        "key": "ctrl+shift+pageup",
         "command": "block-travel.selectUp",
         "when": "editorTextFocus"
     },
@@ -95,7 +95,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+pagedown",
+        "key": "ctrl+pagedown",
         "command": "block-travel.jumpDown",
         "when": "editorTextFocus"
     },
@@ -105,7 +105,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "alt+pageup",
+        "key": "ctrl+pageup",
         "command": "block-travel.jumpUp",
         "when": "editorTextFocus"
     },
