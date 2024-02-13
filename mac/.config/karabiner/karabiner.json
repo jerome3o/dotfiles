@@ -18,6 +18,20 @@
                 },
                 "rules": [
                     {
+                        "description": "forced learning",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "return_or_enter"
+                                },
+                                "to": {
+                                    "key_code": "return"
+                                },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Fun cool new ideas",
                         "manipulators": [
                             {
@@ -214,6 +228,20 @@
                                         ]
                                     }
                                 ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "fn"
+                                        ]
+                                    }
+                                },
+                                "to": {
+                                    "key_code": "return_or_enter"
+                                },
                                 "type": "basic"
                             }
                         ]
