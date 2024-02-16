@@ -1350,7 +1350,11 @@ xkb_symbols "pc+us+us:2+inet(evdev)" {
         symbols[Group1]= [     KP_Multiply,     KP_Multiply,     KP_Multiply,     KP_Multiply,   XF86ClearGrab ]
     };
     key <LALT> {         [           Alt_L,          Meta_L ] };
-    key <SPCE> {         [           space,          underscore ] };
+    key <SPCE> {
+        type= "CUST_CAPSLOCK",
+        symbols[Group1]= [           space,          underscore, Return],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<RTRN>, clearmods=Lock) ]
+    };
     key <CAPS> {         [       Caps_Lock ] };
     key <FK01> {
         type= "CTRL+ALT",
