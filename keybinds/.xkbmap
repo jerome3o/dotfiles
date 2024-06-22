@@ -1155,6 +1155,8 @@ xkb_compatibility "complete" {
     interpret Any+AnyOf(all) {
         action= SetMods(modifiers=modMapMods,clearLocks);
     };
+
+    interpret F13 + AnyOfOrNone(all) { action = Redirect(key=<FK13>); };
     group 2 = AltGr;
     group 3 = AltGr;
     group 4 = AltGr;
@@ -1224,8 +1226,9 @@ xkb_symbols "pc+us+us:2+inet(evdev)" {
         symbols[Group1]= [               r,               R ]
     };
     key <AD05> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               t,               T ]
+        type= "CUST_CAPSLOCK",
+        symbols[Group1]= [               t,               T,   NoSymbol ],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<AD05>, mods=Shift+Alt+Control, clearmods=Lock) ]
     };
     key <AD06> {
         type= "CUST_CAPSLOCK",
@@ -1324,12 +1327,14 @@ xkb_symbols "pc+us+us:2+inet(evdev)" {
         symbols[Group1]= [               c,               C ]
     };
     key <AB04> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               v,               V ]
+        type= "CUST_CAPSLOCK",
+        symbols[Group1]= [               v,               V,   NoSymbol ],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<AB04>, mods=Shift+Alt+Control, clearmods=Lock) ]
     };
     key <AB05> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               b,               B ]
+        type= "CUST_CAPSLOCK",
+        symbols[Group1]= [               b,               B,   NoSymbol ],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<AB05>, mods=Shift+Alt+Control, clearmods=Lock) ]
     };
     key <AB06> {
         type= "CUST_CAPSLOCK",
@@ -1530,12 +1535,12 @@ xkb_symbols "pc+us+us:2+inet(evdev)" {
     key <I188> {         [      parenright ] };
     key <I189> {         [         XF86New ] };
     key <I190> {         [            Redo ] };
-    key <FK13> {         [       XF86Tools ] };
-    key <FK14> {         [     XF86Launch5 ] };
-    key <FK15> {         [     XF86Launch6 ] };
-    key <FK16> {         [     XF86Launch7 ] };
-    key <FK17> {         [     XF86Launch8 ] };
-    key <FK18> {         [     XF86Launch9 ] };
+    // key <FK13> {         [       XF86Tools ] };
+    // key <FK14> {         [     XF86Launch5 ] };
+    // key <FK15> {         [     XF86Launch6 ] };
+    // key <FK16> {         [     XF86Launch7 ] };
+    // key <FK17> {         [     XF86Launch8 ] };
+    // key <FK18> {         [     XF86Launch9 ] };
     key <FK20> {         [ XF86AudioMicMute ] };
     key <FK21> {         [ XF86TouchpadToggle ] };
     key <FK22> {         [  XF86TouchpadOn ] };
