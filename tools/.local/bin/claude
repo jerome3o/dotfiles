@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+
+import sys
+import argparse
+import asyncio
+from anthropic import AsyncAnthropic
+
+
+async def main():
+    parser = argparse.ArgumentParser(
+        description="Make async streaming API calls to Claude from the command line."
+    )
+    parser.add_argument(
+        "prompt", nargs="?", help="Optional prompt to prepend to the input"
+    )
+    args = parser.parse_args()
+
+    # Read input from stdin
+    user_input = sys.stdin.read().strip()
+
+    # Combine prompt (if provided) and user input
+    full_input = f"{args.prompt}\n\n{user_input}" if args.prompt else user_input
+
+    # System prompt
+    system_prompt = (
+        "This is a conversation between an AI assistant Claude and a user in a terminal. "
+        "The assistant is helpful and concise."
+    )
+
+    # Initialize the Anthropic client
+    client = AsyncAnthropic()
+
+    try:
+        # Make the async streaming API call
+        async with client.messages.stream(
+            model="claude-3-sonnet-20240229",
+            max_tokens=1000,
+            system=system_prompt,
+            messages=[{"role": "user", "content": full_input}],
+        ) as stream:
+            async for text in stream.text_stream:
+                print(text, end="", flush=True)
+            print()  # Print a newline at the end
+
+    except Exception as e:
+        print(f"An error occurred: {e}", file=sys.stderr)
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
