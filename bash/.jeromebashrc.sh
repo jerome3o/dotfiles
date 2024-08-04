@@ -307,3 +307,8 @@ if command -v kubectl &>/dev/null; then
     # for alias k
     complete -o default -F __start_kubectl k
 fi
+
+# if ~/.env exists, load it
+if [ -f ~/.env ]; then
+		lenv ~/.env
+fi
