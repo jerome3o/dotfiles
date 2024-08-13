@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Check if Zed editor is running
-if pgrep -x zed > /dev/null; then
+if pgrep zed-editor > /dev/null; then
     # Get the currently focused window
     focused_window=$(xdotool getactivewindow getwindowname)
 
