@@ -1315,9 +1315,11 @@ xkb_symbols "pc+us+us:2+inet(evdev)" {
     key <LFSH> {         [         Shift_L ] };
     key <BKSL> {         [       backslash,             bar ] };
     key <AB01> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               z,               Z ]
+        type= "CUST_CAPSLOCK",
+        symbols[Group1]= [               z,               Z,   NoSymbol ],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<AB01>, mods=Shift+Alt+Control, clearmods=Lock) ]
     };
+
     key <AB02> {
         type= "ALPHABETIC",
         symbols[Group1]= [               x,               X ]
