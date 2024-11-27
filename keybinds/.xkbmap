@@ -1325,8 +1325,9 @@ xkb_symbols "pc+us+us:2+inet(evdev)" {
         symbols[Group1]= [               x,               X ]
     };
     key <AB03> {
-        type= "ALPHABETIC",
-        symbols[Group1]= [               c,               C ]
+        type= "CUST_CAPSLOCK",
+        symbols[Group1]= [               c,               C,   NoSymbol ],
+        actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<AB03>, mods=Shift+Alt+Control, clearmods=Lock) ]
     };
     key <AB04> {
         type= "CUST_CAPSLOCK",

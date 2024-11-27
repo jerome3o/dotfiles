@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env /home/jerome/.claude/venv/bin/python
 
 import sys
 import argparse
