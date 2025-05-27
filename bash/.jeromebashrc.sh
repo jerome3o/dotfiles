@@ -210,7 +210,7 @@ function gam(){
 }
 
 # git push force
-function gpf(){
+function gpfwl(){
 	git push --force-with-lease
 	git status
 }

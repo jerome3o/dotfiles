@@ -1,5 +1,6 @@
 {
   "security.workspace.trust.untrustedFiles": "open",
+  "search.followSymlinks": false,
   "cSpell.enabledLanguageIds": [
     "gitcommit",
     "jupyter",
@@ -37,17 +38,18 @@
   },
   "[python]": {
     "editor.formatOnType": true,
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.tabSize": 4
   },
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
     "*": true,
     "plaintext": false,
-    "markdown": true,
+    "markdown": false,
     "scminput": false,
     "yaml": true,
     ".env": false,
-    "properties": false
+    "properties": true
   },
   "window.titleBarStyle": "custom",
   "typescript.updateImportsOnFileMove.enabled": "always",
@@ -94,10 +96,19 @@
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
+  "window.zoomLevel": 2,
+  "redhat.telemetry.enabled": false,
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "editor.tabSize": 2,
+  "xml.server.vmargs": "-Xmx512M",
+  "xml.symbols.maxItemsComputed": 500000,
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
   }
 }
